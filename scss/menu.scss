@@ -1,0 +1,31 @@
+@import 'colors.scss';
+
+%menu {
+    margin-top: 25vh;
+    border: 3px solid $verde-claro;
+    border-radius: 72px;
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    margin-right: 6vw;
+    margin-left: 6vw;
+}
+
+%menu-logo {
+    display: block;
+    margin-bottom: 4vh;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+%menu-title {
+    font-size: 34px;
+    color: $verde-claro;
+    font-weight: 800;
+    text-align: center;
+    user-select: none;
+    margin-bottom: 4vh;
+
+}

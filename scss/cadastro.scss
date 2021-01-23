@@ -2,6 +2,7 @@
 @import 'font.scss';
 @import 'menu.scss';
 
+
 body {
     background-color: $azul-escuro;
     font-family: $font;
@@ -13,32 +14,32 @@ body {
 }
 
 .menu {
-
     @extend %menu;
 
     .menu__logo {
         @extend %menu-logo;
-        width: 100%;
+        width: 40%
+    }
+
+    .menu__title {
+        @extend %menu-title;
     }
 
     .menu__options {
 
-        display: flex;
-        justify-content: space-between;
+        margin-top: 20px;
 
         .menu__options__link {
-            display: inline-block;
-            color: $verde-claro;
-            font-size: 18px;
-            font-weight: 300;
+            display: block;
             text-align: center;
+            font-size: 16px;
+            color: $verde-claro;
+            margin-bottom: 2vh;
 
             &:hover {
                 text-decoration: none;
                 color: $azul-claro;
             }
         }
-    
     }
-
 }

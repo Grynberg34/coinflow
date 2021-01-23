@@ -18,6 +18,15 @@
   cursor: pointer;
 }
 
+.menu .menu__title {
+  font-size: 34px;
+  color: #2bffd5;
+  font-weight: 800;
+  text-align: center;
+  user-select: none;
+  margin-bottom: 4vh;
+}
+
 body {
   background-color: #00175d;
   font-family: "Quicksand", sans-serif;
@@ -29,22 +38,21 @@ body {
 }
 
 .menu .menu__logo {
-  width: 100%;
+  width: 40%;
 }
 .menu .menu__options {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 20px;
 }
 .menu .menu__options .menu__options__link {
-  display: inline-block;
-  color: #2bffd5;
-  font-size: 18px;
-  font-weight: 300;
+  display: block;
   text-align: center;
+  font-size: 16px;
+  color: #2bffd5;
+  margin-bottom: 2vh;
 }
 .menu .menu__options .menu__options__link:hover {
   text-decoration: none;
   color: #4472ff;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=login.css.map */
