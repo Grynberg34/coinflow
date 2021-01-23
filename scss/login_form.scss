@@ -1,0 +1,121 @@
+@import 'colors.scss';
+@import 'font.scss';
+@import 'menu.scss';
+
+
+body {
+    background-color: $azul-escuro;
+    font-family: $font;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.menu {
+    @extend %menu;
+    margin-top: 12vh;
+
+    .menu__logo {
+        @extend %menu-logo;
+        width: 80%;
+    }
+
+    .menu__title {
+        @extend %menu-title;
+        margin-bottom: 2vh;
+    }
+
+    .menu__type {
+        font-size: 16px;
+        font-weight: 400;
+        color: $verde-claro;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    .menu__label {
+        font-size: 16px;
+        font-weight: 400;
+        color: $azul-claro;
+        display: block;
+        text-align: center;
+        margin-bottom: 1vh;
+        user-select: none;
+    }
+
+    .menu__input {
+        width: 100%;
+        border-radius: 12px;
+        border: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2vh;
+        text-align: center;
+        font-size: 12px;
+        background: $cinza;
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+
+    .menu__link {
+        display: block;
+        color: $azul-claro;
+        font-size: 14px;
+        margin-top: 3vh;
+        margin-bottom: 4vh;
+        text-align: center;
+
+        &:hover {
+            text-decoration: none;
+            color: $verde-claro;
+        }
+    }
+
+    .menu__button {
+        display: block;
+        border: 2px solid $verde-claro;
+        border-radius: 12px;
+        color: $verde-claro;
+        background: none;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 8vw;
+
+        &:hover {
+            border: 2px solid $azul-claro;
+            color: $azul-claro;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .menu {
+        border: none;
+        margin-left: 3vw;
+        margin-right: 3vw;
+
+        .menu__input {
+            width: 50%;
+        }
+
+        .menu__button {
+            width: 25vw;
+        }
+    }
+
+}

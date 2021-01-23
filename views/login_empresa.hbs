@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/login_form.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -21,22 +21,23 @@
             <div class="menu">
                 <form action="/login/empresa" method="post">
 
-                    <h1 class="menu__title">LOGIN</h1>
+                    <a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a>
 
-                    <a class="menu__link" href="/">VOLTAR</a>
+                    <h1 class="menu__title">login</h1>
+                    <h3 class="menu__type">empresa</h3>
 
                     <h3 class="menu__msg">{{message}}</h3> <br>
 
-                    <label class="menu__label" for="email"><b>EMAIL</b></label>
+                    <label class="menu__label" for="email">email</label>
                     <input class="menu__input" type="email" placeholder="Insira seu email" name="email" id="email" required>
 
 
-                    <label class="menu__label" for="password"><b>SENHA</b></label>
+                    <label class="menu__label" for="password">senha</label>
                     <input class="menu__input" type="password" placeholder="Insira a senha" name="password" id="password" minlength="8" required>
 
-                    <a class="menu__link pass" href="/redefinir">ESQUECEU A SENHA?</a>
+                    <a class="menu__link" href="/redefinir/empresa">esqueceu a senha?</a>
 
-                    <button class="menu__button" type="submit">ENTRAR</button>
+                    <button class="menu__button" type="submit">entrar</button>
 
 
                 </form>

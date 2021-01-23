@@ -1,0 +1,125 @@
+.menu {
+  margin-top: 25vh;
+  border: 3px solid #2bffd5;
+  border-radius: 72px;
+  padding-top: 8vh;
+  padding-bottom: 10vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  margin-right: 6vw;
+  margin-left: 6vw;
+}
+
+.menu .menu__logo {
+  display: block;
+  margin-bottom: 4vh;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.menu .menu__title {
+  font-size: 34px;
+  color: #2bffd5;
+  font-weight: 800;
+  text-align: center;
+  user-select: none;
+  margin-bottom: 4vh;
+}
+
+body {
+  background-color: #00175d;
+  font-family: "Quicksand", sans-serif;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.menu {
+  margin-top: 12vh;
+}
+.menu .menu__logo {
+  width: 80%;
+}
+.menu .menu__title {
+  margin-bottom: 2vh;
+}
+.menu .menu__type {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2bffd5;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+.menu .menu__label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4472ff;
+  display: block;
+  text-align: center;
+  margin-bottom: 1vh;
+  user-select: none;
+}
+.menu .menu__input {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vh;
+  text-align: center;
+  font-size: 12px;
+  background: #dddddd;
+}
+.menu .menu__input:focus {
+  outline: none;
+}
+.menu .menu__link {
+  display: block;
+  color: #4472ff;
+  font-size: 14px;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+  text-align: center;
+}
+.menu .menu__link:hover {
+  text-decoration: none;
+  color: #2bffd5;
+}
+.menu .menu__button {
+  display: block;
+  border: 2px solid #2bffd5;
+  border-radius: 12px;
+  color: #2bffd5;
+  background: none;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8vw;
+}
+.menu .menu__button:hover {
+  border: 2px solid #4472ff;
+  color: #4472ff;
+}
+.menu .menu__button:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu {
+    border: none;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+  .menu .menu__input {
+    width: 50%;
+  }
+  .menu .menu__button {
+    width: 25vw;
+  }
+}
+
+/*# sourceMappingURL=login_form.css.map */
