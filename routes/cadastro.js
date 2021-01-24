@@ -36,8 +36,8 @@ router.post('/empresa', function(req, res) {
   var code = uuidv4();
   var password = req.body.password;
   var repeat = req.body.repeatpassword;
-  var userexists = "Esse email já foi utilizado por outro usuário";
-  var passdontmatch = "As senhas não coincidem.";
+  var userexists = "esse email já foi utilizado por outro usuário";
+  var passdontmatch = "as senhas não coincidem";
 
   if (password == repeat) {
 

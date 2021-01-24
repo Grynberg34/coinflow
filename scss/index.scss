@@ -15,6 +15,9 @@ body {
 .menu {
 
     @extend %menu;
+    margin-right: 6vw;
+    margin-left: 6vw;
+
 
     .menu__logo {
         @extend %menu-logo;

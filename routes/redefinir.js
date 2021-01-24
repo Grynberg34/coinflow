@@ -44,7 +44,7 @@ router.get('/empresa',checkAuthentication, function(_, res) {
 router.post('/empresa', function(req, res) {
 
   var email = req.body.email;
-  var emailnotfound = 'We could not find any registered account with this email.'
+  var emailnotfound = 'não existe uma conta de empresa registrada com esse email.'
   
   connection.query(`SELECT * from empresas where EMAIL = '${email}' `, function(err, rows) {
     if (err)
@@ -106,7 +106,7 @@ router.get('/funcionario',checkAuthentication, function(_, res) {
 router.post('/funcionario', function(req, res) {
 
   var email = req.body.email;
-  var emailnotfound = 'We could not find any registered account with this email.'
+  var emailnotfound = 'não existe nenhuma conta de funcionário registrada com esse email'
   
   connection.query(`SELECT * from funcionarios where EMAIL = '${email}' `, function(err, rows) {
     if (err)
@@ -147,8 +147,8 @@ router.post('/codigo/funcionario', function(req, res) {
   var emailcode = req.body.code;
   var password = req.body.password;
   var repeat = req.body.repeatpassword;
-  var message = 'Senhas não coincidem.';
-  var message2 = 'Código errado. Tente novamente';
+  var message = 'senhas não coincidem';
+  var message2 = 'código errado, tente novamente';
   var hashedpassword = bcrypt.hashSync(password, 10);
   if (password == repeat){
     if (code == emailcode) {

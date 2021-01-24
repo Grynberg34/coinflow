@@ -7,6 +7,7 @@
 body {
     background-color: $azul-escuro;
     font-family: $font;
+    overflow: auto;
 }
 
 .row {
@@ -16,8 +17,7 @@ body {
 
 .menu {
     @extend %menu;
-    margin-top: 12vh;
-    margin-bottom: 12vh;
+    margin-top: 25vh;
     margin-left: 2vw;
     margin-right: 2vw;
 
@@ -29,32 +29,11 @@ body {
     .menu__title {
         @extend %menu-title;
         margin-bottom: 0;
-    }
-
-    .menu__type {
-        @extend %menu-type;
-        margin-bottom: 4vh;
-    }
-
-    .menu__label {
-        @extend %menu-label;
-    }
-
-    .menu__input {
-        @extend %menu-input;
+        font-size: 25px;
     }
 
     .menu__link {
         @extend %menu-link;
-    }
-
-    .menu__button {
-        @extend %menu-button;
-        margin-top: 6vh;
-    }
-
-    .menu__msg {
-        @extend %menu-msg;
     }
 
 
@@ -67,13 +46,6 @@ body {
         margin-left: 3vw;
         margin-right: 3vw;
 
-        .menu__input {
-            width: 50%;
-        }
-
-        .menu__button {
-            width: 25vw;
-        }
     }
 
 }

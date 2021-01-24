@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/code_form.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -22,16 +22,17 @@
 
                 <form action="/redefinir/codigo/empresa" method="POST">
 
-                    <h1 class="menu__title">REDEFINIR</h1>
+                    <a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a>
+                    <h1 class="menu__title">redefinir</h1>
                     <p class="menu__msg">{{message}} {{message2}}</p>
-                    <label class="menu__label" for="code"><b>CÓDIGO</b></label>
+                    <label class="menu__label" for="code"><b>código</b></label>
                     <input class="menu__input" type="text" placeholder="Enter received code" name="code" id="code" required>
-                    <label class="menu__label" for="password"><b>NOVA SENHA</b></label>
+                    <label class="menu__label" for="password"><b>nova senha</b></label>
                     <input class="menu__input" type="password" placeholder="Enter new password" name="password" id="password" minlength="8" required>
-                    <label class="menu__label" for="repeatpassword"><b>REPETIR</b></label>
+                    <label class="menu__label" for="repeatpassword"><b>repetir</b></label>
                     <input class="menu__input" type="password" placeholder="Repeat password" name="repeatpassword" id="repeatpassword" required>
 
-                    <button class="menu__button" type="submit">REDEFINIR</button>
+                    <button class="menu__button" type="submit">redefinir</button>
 
                 </form>
 

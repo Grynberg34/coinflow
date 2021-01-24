@@ -8,8 +8,6 @@
     padding-bottom: 10vh;
     padding-left: 4vw;
     padding-right: 4vw;
-    margin-right: 6vw;
-    margin-left: 6vw;
 }
 
 %menu-logo {
@@ -28,4 +26,12 @@
     user-select: none;
     margin-bottom: 4vh;
 
+}
+
+%menu-msg {
+    font-size: 12px;
+    font-style: italic;
+    color: $azul-claro;
+    text-align: center;
+    margin-top: 2vh;
 }

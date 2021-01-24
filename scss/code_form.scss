@@ -7,6 +7,7 @@
 body {
     background-color: $azul-escuro;
     font-family: $font;
+    overflow: auto;
 }
 
 .row {
@@ -16,8 +17,7 @@ body {
 
 .menu {
     @extend %menu;
-    margin-top: 12vh;
-    margin-bottom: 12vh;
+    margin-top: 10vh;
     margin-left: 2vw;
     margin-right: 2vw;
 
@@ -28,12 +28,10 @@ body {
 
     .menu__title {
         @extend %menu-title;
-        margin-bottom: 0;
     }
 
     .menu__type {
         @extend %menu-type;
-        margin-bottom: 4vh;
     }
 
     .menu__label {
@@ -50,7 +48,7 @@ body {
 
     .menu__button {
         @extend %menu-button;
-        margin-top: 6vh;
+        margin-top: 4vh;
     }
 
     .menu__msg {

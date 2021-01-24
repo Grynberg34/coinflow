@@ -75,7 +75,7 @@ function(req, username, password, done) {
     if (err)
       return done(err);
     if (!rows.length) {
-      return done(null, false, req.flash('message', 'Email inválido.'));
+      return done(null, false, req.flash('message', 'email inválido'));
     }
     bcrypt.compare(password, rows[0].hashedpassword, function(err, isMatch) {
       if(err)
@@ -83,7 +83,7 @@ function(req, username, password, done) {
       if(isMatch){
         return done(null, rows[0]);
       } else {
-        return done(null, false, req.flash('message', 'Senha inválida.'));
+        return done(null, false, req.flash('message', 'senha inválida'));
       }
     });
   });

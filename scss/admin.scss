@@ -1,8 +1,6 @@
 @import 'colors.scss';
 @import 'font.scss';
 @import 'menu.scss';
-@import 'form.scss';
-
 
 body {
     background-color: $azul-escuro;
@@ -15,15 +13,17 @@ body {
 }
 
 .menu {
+
     @extend %menu;
-    margin-top: 12vh;
-    margin-bottom: 12vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin-right: 6vw;
+    margin-left: 6vw;
+    margin-top: 20vh;
+    padding-bottom: 6vh;
+
 
     .menu__logo {
         @extend %menu-logo;
-        width: 80%;
+        width: 100%;
     }
 
     .menu__title {
@@ -32,31 +32,27 @@ body {
     }
 
     .menu__type {
-        @extend %menu-type;
-        margin-bottom: 4vh;
-    }
-
-    .menu__label {
-        @extend %menu-label;
-    }
-
-    .menu__input {
-        @extend %menu-input;
+        font-size: 16px;
+        font-weight: 400;
+        color: $verde-claro;
+        text-align: center;
+        margin-bottom: 2vh;
+        user-select: none;
     }
 
     .menu__link {
-        @extend %menu-link;
-    }
-
-    .menu__button {
-        @extend %menu-button;
+        display: block;
+        color: $azul-claro;
+        font-size: 20px;
         margin-top: 6vh;
+        margin-bottom: 4vh;
+        text-align: center;
+    
+        &:hover {
+            text-decoration: none;
+            color: $verde-claro;
+        }
     }
-
-    .menu__msg {
-        @extend %menu-msg;
-    }
-
 
 }
 
@@ -66,14 +62,6 @@ body {
         border: none;
         margin-left: 3vw;
         margin-right: 3vw;
-
-        .menu__input {
-            width: 50%;
-        }
-
-        .menu__button {
-            width: 25vw;
-        }
     }
 
 }

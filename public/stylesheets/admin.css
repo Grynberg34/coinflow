@@ -28,7 +28,6 @@
 body {
   background-color: #00175d;
   font-family: "Quicksand", sans-serif;
-  overflow: auto;
 }
 
 .row {
@@ -37,30 +36,36 @@ body {
 }
 
 .menu {
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-right: 6vw;
+  margin-left: 6vw;
+  margin-top: 20vh;
+  padding-bottom: 6vh;
 }
 .menu .menu__logo {
-  width: 60%;
+  width: 100%;
 }
-.menu .menu__options__link {
-  display: block;
-  text-align: center;
+.menu .menu__title {
+  margin-bottom: 0;
+}
+.menu .menu__type {
   font-size: 16px;
+  font-weight: 400;
   color: #2bffd5;
+  text-align: center;
   margin-bottom: 2vh;
-  border: 2px solid #2bffd5;
-  border-radius: 12px;
-  padding: 1vh;
-  margin-left: 4vw;
-  margin-right: 4vw;
+  user-select: none;
 }
-.menu .menu__options__link:hover {
-  text-decoration: none;
+.menu .menu__link {
+  display: block;
   color: #4472ff;
-  border: 2px solid #4472ff;
-  background-color: #2bffd5;
-  font-weight: 600;
+  font-size: 20px;
+  margin-top: 6vh;
+  margin-bottom: 4vh;
+  text-align: center;
+}
+.menu .menu__link:hover {
+  text-decoration: none;
+  color: #2bffd5;
 }
 
 @media only screen and (max-width: 767px) {
@@ -69,10 +74,6 @@ body {
     margin-left: 3vw;
     margin-right: 3vw;
   }
-  .menu .menu__options .menu__options__link {
-    margin-left: 18vw;
-    margin-right: 18vw;
-  }
 }
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=admin.css.map */
