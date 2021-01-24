@@ -17,6 +17,8 @@ const logoutRouter = require('./routes/logout');
 const redefinirRouter = require('./routes/redefinir');
 const adminRouter = require('./routes/admin');
 const userRouter = require('./routes/user');
+const sobreRouter = require('./routes/sobre');
+const contatoRouter = require('./routes/contato');
 
 const app = express();
 
@@ -123,6 +125,8 @@ app.use('/logout', logoutRouter);
 app.use('/redefinir', redefinirRouter);
 app.use('/admin', adminRouter);
 app.use('/user', userRouter);
+app.use('/sobre', sobreRouter);
+app.use('/contato', contatoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

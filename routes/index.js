@@ -17,7 +17,6 @@ function checkAuthentication(req,res,next){
   }
 }
 
-/* GET home page. */
 router.get('/', checkAuthentication, function(req, res) {
  res.render('index')
 });
