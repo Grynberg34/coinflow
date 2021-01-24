@@ -34,7 +34,7 @@ function checkAuthentication(req,res,next){
 }
 
 router.get('/',checkAuthentication, function(_, res) {
-  res.render('redefinir')
+  res.redirect('/login')
 });
 
 router.get('/empresa',checkAuthentication, function(_, res) {

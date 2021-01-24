@@ -37,22 +37,29 @@ body {
   margin-right: 0;
 }
 
+.menu {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
 .menu .menu__logo {
-  width: 40%;
+  width: 60%;
 }
-.menu .menu__options {
-  margin-top: 20px;
-}
-.menu .menu__options .menu__options__link {
+.menu .menu__options__link {
   display: block;
   text-align: center;
   font-size: 16px;
   color: #2bffd5;
   margin-bottom: 2vh;
+  border: 2px solid #2bffd5;
+  border-radius: 12px;
+  padding: 1vh;
+  margin-left: 4vw;
+  margin-right: 4vw;
 }
-.menu .menu__options .menu__options__link:hover {
+.menu .menu__options__link:hover {
   text-decoration: none;
   color: #4472ff;
+  border: 2px solid #4472ff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -60,6 +67,10 @@ body {
     border: none;
     margin-left: 3vw;
     margin-right: 3vw;
+  }
+  .menu .menu__options .menu__options__link {
+    margin-left: 18vw;
+    margin-right: 18vw;
   }
 }
 

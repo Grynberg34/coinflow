@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/cadastro_form.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -21,29 +21,30 @@
             <div class="menu">
                 <form action="/cadastro/empresa" method="post">
 
-                    <h1 class="menu__title">CADASTRO EMPRESA</h1>
+                    <a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a>
 
-                    <a class="menu__link" href="/login">VOLTAR</a>
+                    <h1 class="menu__title">cadastro</h1>
+                    <h3 class="menu__type">empresa</h3>
 
-                    <h3 class="menu__msg">{{passdontmatch}}{{userexists}}{{whitespace}}</h3>
+                    <h3 class="menu__msg">{{passdontmatch}}{{userexists}}{{whitespace}}{{invalidcode}}</h3>
 
-                    <label class="menu__label" for="name"><b>NOME DA EMPRESA</b></label>
-                    <input class="menu__input" type="text" placeholder="Insira seu nome e sobrenome" name="name" id="name" required>
+                    <label class="menu__label" for="name"><b>nome da empresa</b></label>
+                    <input class="menu__input" type="text" name="name" id="name" required>
 
-                    <label class="menu__label" for="areas"><b>ÁREA(S) DE ATUAÇÃO</b></label>
-                    <input class="menu__input" type="text" placeholder="Insira seu nome e sobrenome" name="areas" id="areas" required>
+                    <label class="menu__label" for="email"><b>email</b></label>
+                    <input class="menu__input" type="email" name="email" id="email" required>
 
-                    <label class="menu__label" for="email"><b>EMAIL</b></label>
-                    <input class="menu__input" type="email" placeholder="Insira seu email" name="email" id="email" required>
+                    <label class="menu__label" for="areas"><b>áreas de atuação</b></label>
+                    <input class="menu__input" type="text" placeholder="Opcional" name="areas" id="areas">
 
-                    <label class="menu__label" for="password"><b>SENHA</b></label>
+                    <label class="menu__label" for="password"><b>senha</b></label>
                     <input class="menu__input" type="password" placeholder="Insira a senha" name="password" id="password" minlength="8" required>
 
-                    <label class="menu__label" for="repeatpassword"><b>REPETIR</b></label>
+                    <label class="menu__label" for="repeatpassword"><b>repetir</b></label>
                     <input class="menu__input" type="password" placeholder="Repetir a senha" name="repeatpassword" id="repeatpassword" required>
 
 
-                    <button class="menu__button" type="submit">CADASTRAR</button>
+                    <button class="menu__button" type="submit">cadastrar</button>
 
                 </form>
             </div>

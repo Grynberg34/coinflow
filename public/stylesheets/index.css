@@ -34,6 +34,10 @@ body {
 .menu .menu__options {
   display: flex;
   justify-content: space-between;
+  border-top: 2px solid #2bffd5;
+  border-bottom: 2px solid #2bffd5;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 .menu .menu__options .menu__options__link {
   display: inline-block;

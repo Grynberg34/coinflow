@@ -25,6 +25,10 @@ body {
 
         display: flex;
         justify-content: space-between;
+        border-top: 2px solid $verde-claro;
+        border-bottom: 2px solid $verde-claro;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
 
         .menu__options__link {
             display: inline-block;

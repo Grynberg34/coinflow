@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/redefinir.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <title>Coinflow</title>
+    <title>Coinflow | Redefinir senha</title>
 </head>
 <body>
 
@@ -22,16 +22,19 @@
 
                 <form action="/redefinir/empresa" method="POST">
 
-                    <h1 class="menu__title">REDEFINIR</h1>
-            
-                    <a class="menu__link" href="/">VOLTAR</a>
+                    <a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a>
+
+                    <h1 class="menu__title">redefinir senha</h1>
+
+                    <h3 class="menu__type">empresa</h3>
+
 
                     <h3 class="menu__msg">{{emailnotfound}}{{message}}{{message2}}</h3>
 
                     <input class="menu__input" type="email" placeholder="Inserir email" name="email" id="email" required>
 
 
-                    <button class="menu__button" type="submit" >Enviar código</button>
+                    <button class="menu__button" type="submit" >enviar código</button>
 
 
                 </form>

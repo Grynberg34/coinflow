@@ -15,10 +15,12 @@ body {
 
 .menu {
     @extend %menu;
+    margin-left: 10vw;
+    margin-right: 10vw;
 
     .menu__logo {
         @extend %menu-logo;
-        width: 40%
+        width: 60%
     }
 
     .menu__title {
@@ -35,11 +37,18 @@ body {
             font-size: 16px;
             color: $verde-claro;
             margin-bottom: 2vh;
+            border: 2px solid $verde-claro;
+            border-radius: 12px;
+            padding: 1vh;
+            margin-left: 4vw;
+            margin-right: 4vw;
 
             &:hover {
                 text-decoration: none;
                 color: $azul-claro;
+                border: 2px solid $azul-claro;
             }
+
         }
     }
 }
@@ -50,6 +59,13 @@ body {
         border: none;
         margin-left: 3vw;
         margin-right: 3vw;
+
+        .menu__options {
+            .menu__options__link { 
+                margin-left: 18vw;
+                margin-right: 18vw;
+            }
+        }
     }
 
 }

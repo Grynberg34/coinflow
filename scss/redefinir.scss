@@ -16,7 +16,6 @@ body {
 
 .menu {
     @extend %menu;
-    margin-top: 12vh;
     margin-left: 2vw;
     margin-right: 2vw;
 
@@ -27,11 +26,13 @@ body {
 
     .menu__title {
         @extend %menu-title;
+        font-size: 28px;
         margin-bottom: 0;
     }
 
     .menu__type {
-        @extend %menu-type
+        @extend %menu-type;
+        margin-bottom: 6vh;
     }
 
     .menu__label {
@@ -48,6 +49,8 @@ body {
 
     .menu__button {
         @extend %menu-button;
+        margin-top: 4vh;
+        width: 60%;
     }
 
 
@@ -65,7 +68,7 @@ body {
         }
 
         .menu__button {
-            width: 25vw;
+            width: 40vw;
         }
     }
 

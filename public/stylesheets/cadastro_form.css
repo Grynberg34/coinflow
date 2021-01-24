@@ -106,6 +106,7 @@ body {
 
 .menu {
   margin-top: 12vh;
+  margin-bottom: 12vh;
   margin-left: 2vw;
   margin-right: 2vw;
 }
@@ -115,6 +116,13 @@ body {
 .menu .menu__title {
   margin-bottom: 0;
 }
+.menu .menu__type {
+  margin-bottom: 4vh;
+}
+.menu .menu__button {
+  margin-top: 6vh;
+}
+
 @media only screen and (max-width: 767px) {
   .menu {
     border: none;
@@ -129,4 +137,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=login_form.css.map */
+/*# sourceMappingURL=cadastro_form.css.map */

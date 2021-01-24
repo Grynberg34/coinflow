@@ -1,0 +1,74 @@
+@import 'colors.scss';
+
+%menu-input {
+    width: 60%;
+    border-radius: 12px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 12px;
+    background: $cinza;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+%menu-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: $azul-claro;
+    display: block;
+    text-align: center;
+    margin-bottom: 1vh;
+    user-select: none;
+}
+
+%menu-link {
+    display: block;
+    color: $azul-claro;
+    font-size: 14px;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+    text-align: center;
+
+    &:hover {
+        text-decoration: none;
+        color: $verde-claro;
+    }
+}
+
+%menu-button {
+    display: block;
+    border: 2px solid $verde-claro;
+    border-radius: 12px;
+    color: $verde-claro;
+    background: none;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8vw;
+
+    &:hover {
+        border: 2px solid $azul-claro;
+        color: $azul-claro;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}
+
+%menu-type {
+    font-size: 16px;
+    font-weight: 400;
+    color: $verde-claro;
+    text-align: center;
+    margin-bottom: 2vh;
+    user-select: none;
+}
+
