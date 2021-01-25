@@ -143,6 +143,16 @@ body {
   .menu .menu__button {
     width: 25vw;
   }
+  .menu .menu__button {
+    font-size: 12px;
+  }
+  .menu .menu__button:hover {
+    text-decoration: none;
+    color: #2bffd5;
+    border: 2px solid #2bffd5;
+    background: none;
+    font-weight: 400;
+  }
 }
 
 /*# sourceMappingURL=cadastro_form.css.map */

@@ -150,6 +150,13 @@ body {
   .menu .menu__button {
     width: 40vw;
   }
+  .menu .menu__button:hover {
+    text-decoration: none;
+    color: #2bffd5;
+    border: 2px solid #2bffd5;
+    background: none;
+    font-weight: 400;
+  }
 }
 
 /*# sourceMappingURL=redefinir.css.map */

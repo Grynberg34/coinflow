@@ -56,6 +56,16 @@ body {
         border: none;
         margin-left: 3vw;
         margin-right: 3vw;
+
+        .menu__options {
+            .menu__options__link {
+                &:hover {
+                    text-decoration: none;
+                    color: $verde-claro;
+                }
+            }
+        }
     }
+
 
 }

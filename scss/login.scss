@@ -62,7 +62,17 @@ body {
             .menu__options__link { 
                 margin-left: 18vw;
                 margin-right: 18vw;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $verde-claro;
+                    border: 2px solid $verde-claro;
+                    background: none;
+                    font-weight: 400;
+                }
             }
+
+
         }
 
     }

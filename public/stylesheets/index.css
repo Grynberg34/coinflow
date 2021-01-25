@@ -59,6 +59,10 @@ body {
     margin-left: 3vw;
     margin-right: 3vw;
   }
+  .menu .menu__options .menu__options__link:hover {
+    text-decoration: none;
+    color: #2bffd5;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

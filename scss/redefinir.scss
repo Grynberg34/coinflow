@@ -77,6 +77,14 @@ body {
 
         .menu__button {
             width: 40vw;
+
+            &:hover {
+                text-decoration: none;
+                color: $verde-claro;
+                border: 2px solid $verde-claro;
+                background: none;
+                font-weight: 400;
+            }
         }
     }
 

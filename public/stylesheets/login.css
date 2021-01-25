@@ -73,6 +73,13 @@ body {
     margin-left: 18vw;
     margin-right: 18vw;
   }
+  .menu .menu__options .menu__options__link:hover {
+    text-decoration: none;
+    color: #2bffd5;
+    border: 2px solid #2bffd5;
+    background: none;
+    font-weight: 400;
+  }
 }
 
 /*# sourceMappingURL=login.css.map */
