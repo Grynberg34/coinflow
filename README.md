@@ -9,7 +9,7 @@ A aplicação está sendo desenvolvida em Node.js com uso de database MYSQL e ex
 
 585e9385-7e15-438b-982c-9eb98f097bab
 
-Enquanto a interface de administrador de empresa não está pronta e portanto o código de empresa para cadastro de funcionário, utilize um destes códigos caso queira testar a funcionalidade de cadastro de funcionários.
+Enquanto a interface de administrador de empresa não está pronta e portanto o código de empresa para cadastro de funcionários ainda não está visível fora da database, utilize um destes códigos caso queira testar a funcionalidade de cadastro de funcionários.
 
 
 ---- PROPOSTA -----
