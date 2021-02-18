@@ -81,10 +81,11 @@ router.post('/funcionario', function(req, res) {
   var invalidcode = 'Código da empresa inválido.';
 
 
-  connection.query(`SELECT id FROM empresas WHERE codigo_cadastro = '${code}'`, function (err, id_empresa, fields) {
+  connection.query(`SELECT id FROM empresas WHERE codigo_cadastro = '${code}'`, function (err, empresa, fields) {
     if (err) res.render('cadastro_funcionario', {invalidcode})
     else {
       if (password == repeat) {
+        var id_empresa = empresa[0].id;
         connection.query(`SELECT COUNT(*) as number FROM empresas WHERE email = '${email}'`, function (err, rows, fields) {
           if (rows[0].number > 0) {
             res.render('cadastro_funcionario', {userexists})

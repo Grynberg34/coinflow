@@ -32,3 +32,9 @@ SPRINT 1 - JANEIRO DE 2021:
 3. Criação de rotas index, login, cadastro, recuperação de senha, sobre, contato e tela (provisória) com acesso autenticado de administrador de conta da empresa e funcionário.
 4. Aplicação da identidade visual com logotipo, fonte, paleta de cores e animações CSS com uso da extensão SASS.
 
+SPRINT 2 - FEVEREIRO DE 2021:
+
+1. Implementação de interface do menu inicial de admin de empresa
+2. Implementação de funcionalidade de listagem de funcionários cadastrados de uma empresa (admin de empresa)
+3. Implementação de funcionalidade de deletar funcionários cadastrados (admin de empresa)
+4. Implementação de funcionalidade de liberação de saldo mensal para funcionários, com possibilidade de editar o valor a ser recebido por cada funcionário a cada mês
