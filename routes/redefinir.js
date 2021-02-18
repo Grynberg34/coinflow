@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require ('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
-const connection = require('../db/connection')
+const connection = require('../db/connection');
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 

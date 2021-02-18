@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 08/02/2021 17:45
+    Creation date: 18/02/2021 17:19
     */
 
     @font-face {
@@ -41,8 +41,10 @@
 .flaticon-transfer:before { content: "\f101"; }
 .flaticon-salary:before { content: "\f102"; }
 .flaticon-gift-box-with-a-bow:before { content: "\f103"; }
+.flaticon-delete:before { content: "\f104"; }
     
     $font-Flaticon-customer: "\f100";
     $font-Flaticon-transfer: "\f101";
     $font-Flaticon-salary: "\f102";
     $font-Flaticon-gift-box-with-a-bow: "\f103";
+    $font-Flaticon-delete: "\f104";
