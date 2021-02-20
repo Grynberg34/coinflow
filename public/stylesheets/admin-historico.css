@@ -181,6 +181,7 @@ body {
 .historico {
   margin-right: 8vw;
   margin-left: 8vw;
+  margin-bottom: 12vh;
 }
 .historico .historico__title {
   font-size: 28px;
@@ -209,7 +210,6 @@ body {
   display: inline-block;
   font-size: 9px;
   color: #4472ff;
-  text-align: center;
 }
 .historico .historico__table__data .historico__table__data__coin {
   display: inline-block;
@@ -260,8 +260,7 @@ body {
     font-size: 10px;
   }
   .historico .historico__table__data {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 1vh;
   }
 }
 

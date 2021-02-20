@@ -135,6 +135,7 @@ body {
         margin-right: 2vw;
 
         .menu__logo {
+            width: 80%;
             margin-bottom: 2vh;
         }
 
@@ -142,15 +143,21 @@ body {
            font-size: 14px;
         }
 
-        .menu__link {
-            display: none;
-        }
-
         .mobile__link {
             margin-top: 6vh;
             display: block;
         }
 
+    }
+
+    .individual {
+        .individual__input {
+            width: 50vw;
+        }
+
+        .individual__button {
+            width: 50vw;
+        }
     }
 
 }

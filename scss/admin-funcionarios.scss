@@ -101,6 +101,10 @@ body {
             text-align: center;
         }
 
+        .left {
+            text-align: left;
+        }
+
     }
 
     .funcionarios__table__data {
@@ -207,6 +211,9 @@ body {
     }
 
     .funcionarios {
+
+        margin-bottom: 8vh;
+
         .email {
             display: none;
         }

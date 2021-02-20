@@ -228,17 +228,22 @@ body {
     margin-right: 2vw;
   }
   .menu .menu__logo {
+    width: 80%;
     margin-bottom: 2vh;
   }
   .menu .menu__title {
     font-size: 14px;
   }
-  .menu .menu__link {
-    display: none;
-  }
   .menu .mobile__link {
     margin-top: 6vh;
     display: block;
+  }
+
+  .individual .individual__input {
+    width: 50vw;
+  }
+  .individual .individual__button {
+    width: 50vw;
   }
 }
 

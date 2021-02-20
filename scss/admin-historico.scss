@@ -79,6 +79,7 @@ body {
 
     margin-right: 8vw;
     margin-left: 8vw;
+    margin-bottom: 12vh;
     
     .historico__title {
         font-size: 28px;
@@ -116,7 +117,6 @@ body {
             display: inline-block;
             font-size: 9px;
             color: $azul-claro;
-            text-align: center;
         }
 
 
@@ -184,8 +184,7 @@ body {
         }
 
         .historico__table__data {
-            margin-top: 2vh;
-            margin-bottom: 2vh;
+            margin-top: 1vh;
         }
     }
 

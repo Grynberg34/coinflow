@@ -77,6 +77,8 @@ body {
 
 .mensal {
 
+    margin-bottom: 8vh;
+
     .mensal__title {
         font-size: 28px;
         color: $azul-claro;
@@ -99,6 +101,10 @@ body {
             font-size: 9px;
             color: $verde-claro;
             text-align: center;
+        }
+
+        .left {
+            text-align: left;
         }
 
     }
@@ -200,8 +206,11 @@ body {
         }
 
         .mensal__table__data {
-            margin-top: 2vh;
-            margin-bottom: 2vh;
+            margin-top: 1vh;
+        }
+
+        .mensal__button {
+            width: 50vw;
         }
     }
 

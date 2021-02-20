@@ -178,6 +178,9 @@ body {
   color: #2bffd5 !important;
 }
 
+.mensal {
+  margin-bottom: 8vh;
+}
 .mensal .mensal__title {
   font-size: 28px;
   color: #4472ff;
@@ -197,6 +200,9 @@ body {
   font-size: 9px;
   color: #2bffd5;
   text-align: center;
+}
+.mensal .mensal__table__head .left {
+  text-align: left;
 }
 .mensal .mensal__table__data {
   border-bottom: 2px solid #4472ff;
@@ -273,8 +279,10 @@ body {
     font-size: 10px;
   }
   .mensal .mensal__table__data {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 1vh;
+  }
+  .mensal .mensal__button {
+    width: 50vw;
   }
 }
 

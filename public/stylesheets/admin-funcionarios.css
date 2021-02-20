@@ -198,6 +198,9 @@ body {
   color: #2bffd5;
   text-align: center;
 }
+.funcionarios .funcionarios__table__head .left {
+  text-align: left;
+}
 .funcionarios .funcionarios__table__data {
   border-bottom: 2px solid #4472ff;
 }
@@ -280,6 +283,9 @@ body {
     display: block;
   }
 
+  .funcionarios {
+    margin-bottom: 8vh;
+  }
   .funcionarios .email {
     display: none;
   }

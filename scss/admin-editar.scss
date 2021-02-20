@@ -96,6 +96,10 @@ body {
 
         }
 
+        .left {
+            text-align: left;
+        }
+
 
     }
 
@@ -230,8 +234,17 @@ body {
         }
 
         .editar__table__data {
-            margin-top: 2vh;
-            margin-bottom: 2vh;
+            margin-top: 1vh;
+        }
+    }
+
+    .form {
+        .form__input {
+            width: 50vw;
+        }
+
+        .form__button {
+            width: 50vw;
         }
     }
 
