@@ -225,6 +225,7 @@ body {
     margin-right: 2vw;
   }
   .menu .menu__logo {
+    width: 80%;
     margin-bottom: 2vh;
   }
   .menu .menu__title {
@@ -234,8 +235,10 @@ body {
     display: none;
   }
   .menu .mobile__link {
-    margin-top: 6vh;
     display: block;
+  }
+  .menu .mobile__link:first-of-type {
+    margin-top: 6vh;
   }
   .menu .menu__options {
     margin-left: 2vw;

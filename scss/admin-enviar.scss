@@ -133,6 +133,7 @@ body {
         margin-right: 2vw;
 
         .menu__logo {
+            width: 80%;
             margin-bottom: 2vh;
         }
 
@@ -145,8 +146,11 @@ body {
         }
 
         .mobile__link {
-            margin-top: 6vh;
             display: block;
+
+            &:first-of-type {
+                margin-top: 6vh;
+            }
         }
 
         .menu__options {

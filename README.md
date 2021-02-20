@@ -3,14 +3,14 @@ Trabalho realizado na Disciplina de Projeto Integrado de Aplicações da Pós-Gr
 A aplicação está sendo desenvolvida em Node.js com uso de database MYSQL e extensão de linguagem SASS para CSS 3.0.
 
 
----- CÓDIGOS DE EMPRESA PARA TESTE DE CADASTRO ----
+---- CONTA PARA TESTE DE INTERFACE DE ADMINISTRADOR DE EMPRESA ----
+
+email: franciscogrynberg34@gmail.com
+senha: 12345678
+
+código da empresa para cadastro de funcionários (presente na rota de listagem de funcionários do menu de admin):
 
 6f7e5a9d-503b-4291-a7aa-2aa64c5d4460
-
-585e9385-7e15-438b-982c-9eb98f097bab
-
-Enquanto a interface de administrador de empresa não está pronta e portanto o código de empresa para cadastro de funcionários ainda não está visível fora da database, utilize um destes códigos caso queira testar a funcionalidade de cadastro de funcionários.
-
 
 ---- PROPOSTA -----
 
@@ -37,4 +37,4 @@ SPRINT 2 - FEVEREIRO DE 2021:
 1. Implementação de interface do menu inicial de admin de empresa
 2. Implementação de funcionalidade de listagem de funcionários cadastrados de uma empresa (admin de empresa)
 3. Implementação de funcionalidade de deletar funcionários cadastrados (admin de empresa)
-4. Implementação de funcionalidade de liberação de saldo mensal para funcionários, com possibilidade de editar o valor a ser recebido por cada funcionário a cada mês
+4. Implementação de funcionalidade de liberação de saldo mensal para funcionários (editar valores, envio mensal, envio individual e histórico de envios)
