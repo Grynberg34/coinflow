@@ -137,7 +137,7 @@ router.post('/:id/enviar/mensal', function(req, res) {
         connection.query(`UPDATE funcionarios SET outflow = outflow + ${funcionarios[i].saldo_mensal} WHERE id_empresa = '${user_id}' and id = '${funcionarios[i].id}'`)
       }
       connection.query(`INSERT INTO envios (id_empresa, data, tipo) VALUES ('${user_id}', NOW(), 'mensal')`)
-      res.redirect(`/admin/${user_id}/funcionarios`)
+      res.redirect(`/admin/${user_id}/enviar/historico`)
     })
   }
 
@@ -167,7 +167,7 @@ router.post('/:id/enviar/individual', function(req, res) {
       if (err) res.render('error')
       connection.query(`UPDATE funcionarios SET outflow = outflow + '${value}' WHERE id_empresa = '${user_id}' and id = '${user}'`)
       connection.query(`INSERT INTO envios (id_empresa, data, tipo, usuario, valor) VALUES ('${user_id}', NOW(), 'individual', '${username[0].nome}', '${value}')`)
-      res.redirect(`/admin/${user_id}/enviar`)
+      res.redirect(`/admin/${user_id}/enviar/historico`)
     })
 
   }
