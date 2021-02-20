@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 18/02/2021 17:19
+    Creation date: 19/02/2021 17:24
     */
 
     @font-face {
@@ -42,9 +42,17 @@
 .flaticon-salary:before { content: "\f102"; }
 .flaticon-gift-box-with-a-bow:before { content: "\f103"; }
 .flaticon-delete:before { content: "\f104"; }
+.flaticon-editar:before { content: "\f105"; }
+.flaticon-history:before { content: "\f106"; }
+.flaticon-group:before { content: "\f107"; }
+.flaticon-user:before { content: "\f108"; }
     
     $font-Flaticon-customer: "\f100";
     $font-Flaticon-transfer: "\f101";
     $font-Flaticon-salary: "\f102";
     $font-Flaticon-gift-box-with-a-bow: "\f103";
     $font-Flaticon-delete: "\f104";
+    $font-Flaticon-editar: "\f105";
+    $font-Flaticon-history: "\f106";
+    $font-Flaticon-group: "\f107";
+    $font-Flaticon-user: "\f108";
