@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/admin-editar.css">
+    <link rel="stylesheet" href="/stylesheets/admin-historico.css">
     <link rel="stylesheet" href="/icons/font/flaticon.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,36 +29,41 @@
 
                 </div>
 
-                <div class="editar">
+                <div class="historico">
 
-                    <h1 class="editar__title">editar saldo mensal</h1>
+                    <h1 class="historico__title">histórico de envios</h1>
 
-                    <div class="editar__table__head row">
-                        <div class="col-4 col-md-3"><h1 class="editar__table__head__title">nome completo</h1></div>
-                        <div class="col-md-3 email"><h1 class="editar__table__head__title">email</h1></div>
-                        <div class="col-3 col-md-3"><h1 class="editar__table__head__title">saldo mensal</h1></div>
-                        <div class="col-2 col-md-3"><h1 class="editar__table__head__title">editar</h1></div>
+                    <h2 class="historico__title__secondary">mensal</h2>
+
+                    <div class="historico__table__head row">
+                        <div class="col-12"><h1 class="historico__table__head__title">data do envio</h1></div>
                     </div>
 
-                    {{#each funcionarios}}
-                        <div class="editar__table__data row">
-                            <div class="col-4 col-md-3"><h1 class="editar__table__data__text">{{this.nome}}</h1></div>
-                            <div class="col-md-3 email"><h1 class="editar__table__data__text">{{this.email}}</h1></div>
-                            <div class="col-4 col-md-3"><div class="editar__table__data__row"><h1 class="editar__table__data__text">{{this.saldo_mensal}}</h1><img class="editar__table__data__coin" src="/images/fs.png" alt=""></div></div>
-                            <div class="col-4 col-md-3"><i id="{{this.id}}" class="editar__table__data__icon flaticon-editar"></i></div>
+                    {{#each mensal}}
+                        <div class="historico__table__data row">
+                            <div class="col-12"><h1 class="historico__table__data__text data">{{this.data}}</h1></div>
                         </div>
                     {{/each}}
 
-                </div>
 
-                <div class="form">
-                    <form id="form" method="POST">
-                        <label class="form__label" for="value">editar valor mensal</label>
-                        <input class="form__input" type="text" id="user" name="user">
-                        <input class="form__input" type="number" id="value" name="value">
-                        <button id="formSubmit" class="form__button" type="button">confirmar</button>
-                    </form>
-                    <button id="formReturn" class="form__button">voltar</button>
+                    <h2 class="historico__title__secondary">individual</h2>
+
+
+                    <div class="historico__table__head row">
+                        <div class="col-4"><h1 class="historico__table__head__title">data</h1></div>
+                        <div class="col-6"><h1 class="historico__table__head__title">funcionário</h1></div>
+                        <div class="col-2"><h1 class="historico__table__head__title">valor</h1></div>
+                    </div>
+
+                    {{#each individual}}
+                        <div class="historico__table__data row">
+                            <div class="col-4"><h1 class="historico__table__data__text data">{{this.data}}</h1></div>
+                            <div class="col-6"><h1 class="historico__table__data__text">{{this.usuario}}</h1></div>
+                            <div class="col-2"><h1 class="historico__table__data__text">{{this.valor}}<img class="historico__table__data__coin" src="/images/fs.png" alt=""></h1></div>
+
+                        </div>
+                    {{/each}}
+
                 </div>
 
             </div>
@@ -73,7 +78,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="/scripts/animate_logo.js"></script>
-    <script src="/scripts/admin-editar.js"></script>
+    <script src="/scripts/admin-historico.js"></script>
 
 </body>
 </html>

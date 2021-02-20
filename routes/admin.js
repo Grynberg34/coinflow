@@ -174,4 +174,21 @@ router.post('/:id/enviar/individual', function(req, res) {
 
 });
 
+
+router.get('/:id/enviar/historico', checkAuthentication, function(req, res) {
+  var id = req.params.id;
+  var user_id = req.user.id;
+  var nome = req.user.nome_empresa;
+  connection.query(`SELECT * FROM envios WHERE id_empresa = '${user_id}' and tipo = 'mensal' ORDER BY id DESC `, function(err, mensal, fields) {
+    if (err) res.render('error', {err})
+    connection.query(`SELECT * FROM envios WHERE id_empresa = '${user_id}' and tipo = 'individual' ORDER BY id DESC `, function(err, individual, fields) {
+      if (err) res.render('error', {err})
+      if(user_id == id) {
+        res.render('admin-historico', {user_id, mensal, individual, nome})
+      }
+      else res.redirect('/')
+    })
+  })
+});
+
 module.exports = router;
