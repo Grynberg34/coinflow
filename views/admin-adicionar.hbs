@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <link rel="stylesheet" href="/stylesheets/admin-adicionar.css">
     <link rel="stylesheet" href="/icons/font/flaticon.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <title>coinflow | {{nome}} | enviar saldo</title>
+    <title>coinflow | {{nome}} | recompensas </title>
 </head>
 <body>
 
@@ -27,36 +27,32 @@
                         <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
                     </div>
 
-                    <div class="row menu__options">
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/enviar/editar">
-                            <div class="menu__options__option" id="editar">
-                                <i class="flaticon-editar menu__options__option__icon"></i>
-                                <h4 class="menu__options__option__title">editar valores</h4>
-                            </div>
-                        </a>
-                        <div class="col-2"></div>
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/enviar/mensal">
-                            <div class="menu__options__option" id="mensal">
-                                <i class="flaticon-group menu__options__option__icon"></i>
-                                <h4 class="menu__options__option__title">mensal</h4>
-                            </div>
-                        </a>
-                    </div>
+                    <div class="menu__form">
 
-                    <div class="row menu__options">
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/enviar/individual">
-                            <div class="menu__options__option" id="individual">
-                                <i class="flaticon-user menu__options__option__icon"></i>
-                                <h4 class="menu__options__option__title">individual</h4>
-                            </div>
-                        </a>
-                        <div class="col-2"></div>
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/enviar/historico">
-                            <div class="menu__options__option" id="historico">
-                                <i class="flaticon-history menu__options__option__icon"></i>
-                                <h4 class="menu__options__option__title">histórico</h4>
-                            </div>
-                        </a>
+                        <h4 class="menu__msg">{{adicionada}} {{formato}}</h4>
+
+                        <form id="form" method="POST" enctype="multipart/form-data">
+
+                            <label class="menu__label" for="nome"><b>nome da recompensa</b></label>
+                            <input class="menu__input" type="text" name="nome" id="nosme" required>
+
+                            <label class="menu__label" for="img"><b>adicione imagem <br> (.png ou .jpg de até 1MB)</b></label>
+                            <input class="menu__input" type="file" name="img"/>
+
+                            <label class="menu__label" for="categoria"><b>categoria</b></label>
+                            <input class="menu__input" type="text" name="categoria" id="categoria" required>
+
+                            <label class="menu__label" for="preço"><b>preço em f$</b></label>
+                            <input class="menu__input" type="number" name="preço" id="preço">
+
+                            <label class="menu__label" for="estoque"><b>estoque</b></label>
+                            <input class="menu__input" type="number" name="estoque" id="estoque">
+
+                            <button id="formSubmit" class="menu__button" type="button">adicionar</button>
+
+                        </form>
+
+    
                     </div>
 
                     <a href="/" class="menu__link mobile__link">menu</a>
@@ -76,7 +72,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="/scripts/animate_logo.js"></script>
-    <script src="/scripts/admin-enviar.js"></script>
+    <script src="/scripts/admin-adicionar.js"></script>
 
 </body>
 </html>

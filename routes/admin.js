@@ -1,6 +1,21 @@
 const express = require('express');
 const router = express.Router();
 const connection = require('../db/connection');
+const multer = require('multer');
+
+const upload = multer({
+  dest: 'public/images/recompensas',
+  limits: {
+  fileSize: 1000000,
+  },
+  fileFilter(req, file, cb) {
+  if (!file.originalname.match(/\.(png|jpg)$/)){
+    cb(new Error('Formato inválido.'), false)
+  }
+  else {
+    cb(undefined, true)}
+  }
+})
 
 function checkAuthentication(req,res,next){
   if (req.isAuthenticated()) {
@@ -199,5 +214,37 @@ router.get('/:id/recompensas', checkAuthentication, function(req, res) {
     res.render('admin-recompensas', {user_id, nome})
   }
 });
+
+router.get('/:id/recompensas/adicionar', checkAuthentication, function(req, res) {
+  var id = req.params.id;
+  var user_id = req.user.id;
+  var nome = req.user.nome_empresa;
+  if(user_id == id) {
+    res.render('admin-adicionar', {user_id, nome})
+  }
+});
+
+router.post('/:id/recompensas/adicionar', upload.single('img'), function(req, res) {
+
+  var id = req.params.id;
+  var user_id = req.user.id;
+  var nome = req.body.nome;
+  var categoria = req.body.categoria;
+  var preço = req.body.preço;
+  var estoque = req.body.estoque;
+  var filename = req.file.filename;
+  var originalname = req.file.originalname;
+  var extension = originalname.substr(-4);
+  var adicionada = 'Recompensa adicionada com sucesso';
+
+  if(user_id == id) {
+    connection.query(`INSERT INTO recompensas (nome, categoria, preço, estoque, id_empresa, nome_arquivo, extensão_arquivo) VALUES ('${nome}', '${categoria}', '${preço}', '${estoque}', '${user_id}', '${filename}', '${extension}') `, function(err, fields) {
+      if (err) res.render('error', {err})
+      res.render('admin-adicionar', {adicionada, user_id, nome})
+    })
+  }
+
+
+})
 
 module.exports = router;
