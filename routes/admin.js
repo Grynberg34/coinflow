@@ -191,4 +191,13 @@ router.get('/:id/enviar/historico', checkAuthentication, function(req, res) {
   })
 });
 
+router.get('/:id/recompensas', checkAuthentication, function(req, res) {
+  var id = req.params.id;
+  var user_id = req.user.id;
+  var nome = req.user.nome_empresa;
+  if(user_id == id) {
+    res.render('admin-recompensas', {user_id, nome})
+  }
+});
+
 module.exports = router;
