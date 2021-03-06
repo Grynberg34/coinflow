@@ -75,29 +75,27 @@ body {
     color: $verde-claro !important;
 }
 
-.mensal {
+.estoque {
 
-    margin-bottom: 8vh;
-
-    .mensal__title {
+    .estoque__title {
         font-size: 28px;
         color: $azul-claro;
         text-align: center;
         margin-bottom: 4vh;
     }
 
-    .mensal__date {
-        color: $verde-claro;
+    .estoque__code {
         font-size: 12px;
+        color: $verde-claro;
+        margin-bottom: 6vh;
         text-align: center;
-        margin-bottom: 4vh;
     }
 
-    .mensal__table__head {
+    .estoque__table__head {
         
         border-bottom: 2px solid $verde-claro;
 
-        .mensal__table__head__title {
+        .estoque__table__head__title {
             font-size: 9px;
             color: $verde-claro;
             text-align: center;
@@ -109,29 +107,50 @@ body {
 
     }
 
-    .mensal__table__data {
+    .estoque__table__data {
 
         border-bottom: 2px solid $azul-claro;
 
-        .mensal__table__data__row {
+        .estoque__table__data__row {
             text-align: center;
         }
 
-        .mensal__table__data__text {
+        .estoque__table__data__text {
             display: inline-block;
             font-size: 9px;
             color: $azul-claro;
         }
 
-
-        .mensal__table__data__coin {
+        .estoque__table__data__number {
             display: inline-block;
-            margin-top: 2px;
-            width: 10px;
-            margin-left: 5px;
+            font-size: 9px;
+            color: $azul-claro;
+            text-align: center;
+            width: 100%;
         }
 
-        .mensal__table__data__icon {
+        .estoque__table__data__link {
+
+            display: block;
+            margin-top: 3px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .estoque__table__data__image {
+            width: 40px;
+        }
+
+        .estoque__table__data__coin {
+            display: inline-block;
+            width: 10px;
+            margin-top: 2px;
+            margin-left: 5px;
+        }   
+
+        .estoque__table__data__icon {
             font-size: 14px;
             color: $azul-claro;
             display: block;
@@ -145,28 +164,62 @@ body {
         }
     }
 
-    .mensal__button {
+}
+
+.form {
+    display: none;
+    margin-top: 6vh;
+
+
+    .form__label {
         display: block;
-        margin-top: 6vh;
-        width: 14vw;
-        border: 2px solid $verde-claro;
-        border-radius: 12px;
-        color: $verde-claro;
-        background: none;
+        font-size: 20px;
+        color: $azul-claro;
         text-align: center;
+    }
+
+    .form__input {
+        display: block;
+        text-align: center;
+        border-radius: 12px;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
         margin-left: auto;
         margin-right: auto;
-
-        &:hover {
-            border: 2px solid $azul-claro;
-            color: $azul-claro;
-        }
+        outline: none;
+        border: none;
+        width: 14vw;
 
         &:focus {
             outline: none;
         }
     }
 
+    .form__button {
+        font-size: 20px;
+        color: $verde-claro;
+        border: 2px solid $verde-claro;
+        border-radius: 12px;
+        display: block;
+        margin-bottom: 2vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 14vw;
+        background: none;
+
+        &:hover {
+            color: $azul-claro;
+            border: 2px solid $azul-claro;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+#rec {
+    display: none;
 }
 
 
@@ -197,21 +250,24 @@ body {
 
     }
 
-    .mensal {
+    .estoque {
+
+        margin-bottom: 8vh;
+
         .email {
             display: none;
         }
 
-        .mensal__code {
+        .estoque__code {
             font-size: 10px;
         }
 
-        .mensal__table__data {
-            margin-top: 1vh;
-        }
+        .estoque__table__data {
+            margin-bottom: 2vh;
 
-        .mensal__button {
-            width: 50vw;
+            .estoque__table__data__coin {
+                margin-left: 1px;
+            }
         }
     }
 

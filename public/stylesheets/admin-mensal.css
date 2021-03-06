@@ -217,6 +217,7 @@ body {
 }
 .mensal .mensal__table__data .mensal__table__data__coin {
   display: inline-block;
+  margin-top: 2px;
   width: 10px;
   margin-left: 5px;
 }

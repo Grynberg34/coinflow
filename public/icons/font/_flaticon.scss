@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 04/03/2021 18:01
+    Creation date: 06/03/2021 19:38
     */
 
     @font-face {
@@ -50,6 +50,7 @@
 .flaticon-add-button:before { content: "\f10a"; }
 .flaticon-shipping:before { content: "\f10b"; }
 .flaticon-get-gifts:before { content: "\f10c"; }
+.flaticon-gallery:before { content: "\f10d"; }
     
     $font-Flaticon-customer: "\f100";
     $font-Flaticon-transfer: "\f101";
@@ -64,3 +65,4 @@
     $font-Flaticon-add-button: "\f10a";
     $font-Flaticon-shipping: "\f10b";
     $font-Flaticon-get-gifts: "\f10c";
+    $font-Flaticon-gallery: "\f10d";

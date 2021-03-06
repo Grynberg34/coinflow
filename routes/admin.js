@@ -2,9 +2,20 @@ const express = require('express');
 const router = express.Router();
 const connection = require('../db/connection');
 const multer = require('multer');
+const path = require('path');
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images/recompensas')
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname))
+  }
+})
 
 const upload = multer({
   dest: 'public/images/recompensas',
+  storage: storage,
   limits: {
   fileSize: 1000000,
   },
@@ -243,8 +254,35 @@ router.post('/:id/recompensas/adicionar', upload.single('img'), function(req, re
       res.render('admin-adicionar', {adicionada, user_id, nome})
     })
   }
-
-
 })
+
+router.get('/:id/recompensas/estoque', checkAuthentication, function(req, res) {
+  var id = req.params.id;
+  var user_id = req.user.id;
+  var nome = req.user.nome_empresa;
+  if(user_id == id) {
+    connection.query(`SELECT * FROM recompensas WHERE id_empresa = '${user_id}'`, function(err, recompensas, fields) {
+      if (err) res.render('error', {err})
+      res.render('admin-estoque', {user_id, recompensas, nome})
+    })
+  }
+});
+
+router.post('/:id/recompensas/estoque', function(req, res) {
+  var id = req.params.id;
+  var user_id = req.user.id;
+  var rec = req.body.rec;
+  var value = req.body.value;
+
+  if(user_id == id) {
+    connection.query(`UPDATE recompensas SET estoque = '${value}' WHERE id_empresa = '${user_id}' and id = '${rec}' `, function(err) {
+      if (err) res.render('error')
+      res.redirect(`/admin/${user_id}/recompensas/estoque`)
+    })
+  }
+
+});
+
+
 
 module.exports = router;

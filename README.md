@@ -38,3 +38,10 @@ SPRINT 2 - FEVEREIRO DE 2021:
 2. Implementação de funcionalidade de listagem de funcionários cadastrados de uma empresa (admin de empresa)
 3. Implementação de funcionalidade de deletar funcionários cadastrados (admin de empresa)
 4. Implementação de funcionalidade de liberação de saldo mensal para funcionários (editar valores, envio mensal, envio individual e histórico de envios)
+
+SPRINT 3 - MARÇO DE 2021
+
+1. Implementação de interface do menu de recompensas para admin de empresa
+2. Implementação de funcionalidade de adicionar recompensas (com nome, preço, imagem, estoque)
+3. Implementação de funcionalidade de remoção de recompensas cadastradas
+4. Implementação de funcionalidade de controle e edição de estoque de recompensas cadastradas
