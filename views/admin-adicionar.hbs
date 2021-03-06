@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <title>coinflow | {{nome}} | recompensas </title>
+    <title>coinflow | {{nome_empresa}} | recompensas </title>
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 
                     <div class="row">
                         <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a></div>
-                        <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
+                        <div class="col-md-4"><h1 class="menu__title">{{nome_empresa}}</h1></div>
                         <div class="col-md-2"><a href="/admin/{{user_id}}/recompensas" class="menu__link">voltar</a></div>
                         <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
                     </div>
@@ -33,8 +33,8 @@
 
                         <form id="form" method="POST" enctype="multipart/form-data">
 
-                            <label class="menu__label" for="nome"><b>nome da recompensa</b></label>
-                            <input class="menu__input" type="text" name="nome" id="nosme" required>
+                            <label class="menu__label" for="name"><b>nome da recompensa</b></label>
+                            <input class="menu__input" type="text" name="name" id="name" required>
 
                             <label class="menu__label" for="img"><b>adicione imagem <br> (.png ou .jpg de até 1MB)</b></label>
                             <input class="menu__input" type="file" name="img"/>

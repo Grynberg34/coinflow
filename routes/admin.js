@@ -229,9 +229,9 @@ router.get('/:id/recompensas', checkAuthentication, function(req, res) {
 router.get('/:id/recompensas/adicionar', checkAuthentication, function(req, res) {
   var id = req.params.id;
   var user_id = req.user.id;
-  var nome = req.user.nome_empresa;
+  var nome_empresa = req.user.nome_empresa;
   if(user_id == id) {
-    res.render('admin-adicionar', {user_id, nome})
+    res.render('admin-adicionar', {user_id, nome_empresa})
   }
 });
 
@@ -239,19 +239,18 @@ router.post('/:id/recompensas/adicionar', upload.single('img'), function(req, re
 
   var id = req.params.id;
   var user_id = req.user.id;
-  var nome = req.body.nome;
+  var nome_empresa = req.user.nome_empresa;
+  var name = req.body.name;
   var categoria = req.body.categoria;
   var preço = req.body.preço;
   var estoque = req.body.estoque;
   var filename = req.file.filename;
-  var originalname = req.file.originalname;
-  var extension = originalname.substr(-4);
   var adicionada = 'Recompensa adicionada com sucesso';
 
   if(user_id == id) {
-    connection.query(`INSERT INTO recompensas (nome, categoria, preço, estoque, id_empresa, nome_arquivo, extensão_arquivo) VALUES ('${nome}', '${categoria}', '${preço}', '${estoque}', '${user_id}', '${filename}', '${extension}') `, function(err, fields) {
+    connection.query(`INSERT INTO recompensas (nome, categoria, preço, estoque, id_empresa, nome_arquivo) VALUES ('${name}', '${categoria}', '${preço}', '${estoque}', '${user_id}', '${filename}') `, function(err, fields) {
       if (err) res.render('error', {err})
-      res.render('admin-adicionar', {adicionada, user_id, nome})
+      res.render('admin-adicionar', {adicionada, user_id, name, nome_empresa})
     })
   }
 })
@@ -278,6 +277,32 @@ router.post('/:id/recompensas/estoque', function(req, res) {
     connection.query(`UPDATE recompensas SET estoque = '${value}' WHERE id_empresa = '${user_id}' and id = '${rec}' `, function(err) {
       if (err) res.render('error')
       res.redirect(`/admin/${user_id}/recompensas/estoque`)
+    })
+  }
+
+});
+
+router.get('/:id/recompensas/remover', checkAuthentication, function(req, res) {
+  var id = req.params.id;
+  var user_id = req.user.id;
+  var nome = req.user.nome_empresa;
+  if(user_id == id) {
+    connection.query(`SELECT * FROM recompensas WHERE id_empresa = '${user_id}'`, function(err, recompensas, fields) {
+      if (err) res.render('error', {err})
+      res.render('admin-remover', {user_id, recompensas, nome})
+    })
+  }
+});
+
+router.post('/:id/recompensas/remover', function(req, res) {
+  var id = req.params.id;
+  var user_id = req.user.id;
+  var del = req.body.del;
+
+  if(user_id == id) {
+    connection.query(`DELETE FROM recompensas WHERE id_empresa = '${user_id}' and id = '${del}' `, function(err) {
+      if (err) res.render('error')
+      res.redirect(`/admin/${user_id}/recompensas/remover`)
     })
   }
 
