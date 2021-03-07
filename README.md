@@ -2,6 +2,10 @@ Trabalho realizado na Disciplina de Projeto Integrado de Aplicações da Pós-Gr
 
 A aplicação está sendo desenvolvida em Node.js com uso de database MYSQL e extensão de linguagem SASS para CSS 3.0.
 
+---- USUÁRIO E SENHA DA DATABASE PARA TESTES LOCAIS ----
+
+Usuário: admin001
+Senha: meritmoney3
 
 ---- CONTA PARA TESTE DE INTERFACE DE ADMINISTRADOR DE EMPRESA ----
 
