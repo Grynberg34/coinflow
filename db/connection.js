@@ -1,11 +1,11 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host     : 'mysql742.umbler.com',
-  port     :  '41890',
-  user     : 'admin001',   
-  password : 'pia2020/1',
-  database : 'coinflow'
+  host     : process.env.DB_HOST,
+  port     :  process.env.DB_PORT,
+  user     : process.env.DB_USER,   
+  password : process.env.DB_PASS,
+  database : process.env.DB_NAME
 })
 
 connection.connect(function(err) {
