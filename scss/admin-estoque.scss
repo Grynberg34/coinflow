@@ -263,11 +263,23 @@ body {
         }
 
         .estoque__table__data {
-            margin-bottom: 2vh;
+            margin-bottom: 1vh;
+            margin-top: 1vh;
 
             .estoque__table__data__coin {
                 margin-left: 1px;
             }
+        }
+    }
+
+    .form {
+
+        .form__input {
+            width: 40vw;
+        }
+
+        .form__button {
+            width: 40vw;
         }
     }
 

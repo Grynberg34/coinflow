@@ -133,6 +133,7 @@ body {
         margin-right: 2vw;
 
         .menu__logo {
+            width: 80%;
             margin-bottom: 2vh;
         }
 
@@ -166,6 +167,10 @@ body {
             }
     
         }
-    }
 
+        .sair {
+            margin-top: 0;
+        }
+    
+    }
 }

@@ -139,7 +139,7 @@ body {
   padding-right: 0;
 }
 .menu .menu__logo {
-  width: 80%;
+  width: 90px;
   margin-bottom: 0;
 }
 .menu .menu__title {
@@ -225,6 +225,7 @@ body {
     margin-right: 2vw;
   }
   .menu .menu__logo {
+    width: 80%;
     margin-bottom: 2vh;
   }
   .menu .menu__title {
@@ -247,6 +248,9 @@ body {
   .menu .menu__options .menu__options__option .menu__options__option__icon {
     display: block;
     font-size: 30px;
+  }
+  .menu .sair {
+    margin-top: 0;
   }
 }
 

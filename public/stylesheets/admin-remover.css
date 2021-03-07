@@ -311,10 +311,15 @@ body {
     font-size: 10px;
   }
   .remover .remover__table__data {
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
   }
   .remover .remover__table__data .remover__table__data__coin {
     margin-left: 1px;
+  }
+
+  .delete .delete__button {
+    width: 40vw;
   }
 }
 
