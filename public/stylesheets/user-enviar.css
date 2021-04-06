@@ -211,6 +211,21 @@ body {
 .individual .individual__input:focus {
   outline: none;
 }
+.individual .individual__text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 2vh;
+  border: none;
+  padding: 1vh;
+  font-size: 12px;
+  width: 14vw;
+}
+.individual .individual__text:focus {
+  outline: none;
+}
 .individual .individual__button {
   display: block;
   margin-top: 6vh;
@@ -222,6 +237,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 8vh;
 }
 .individual .individual__button:hover {
   border: 2px solid #4472ff;
@@ -260,6 +276,9 @@ body {
   }
 
   .individual .individual__input {
+    width: 50vw;
+  }
+  .individual .individual__text {
     width: 50vw;
   }
   .individual .individual__button {

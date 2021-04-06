@@ -116,6 +116,23 @@ body {
         }
     }
 
+    .individual__text {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border-radius: 12px;
+        margin-bottom: 2vh;
+        border: none;
+        padding: 1vh;
+        font-size: 12px;
+        width: 14vw;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
     .individual__button {
         display: block;
         margin-top: 6vh;
@@ -127,6 +144,7 @@ body {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 8vh;
 
         &:hover {
             border: 2px solid $azul-claro;
@@ -175,6 +193,10 @@ body {
 
     .individual {
         .individual__input {
+            width: 50vw;
+        }
+
+        .individual__text {
             width: 50vw;
         }
 
