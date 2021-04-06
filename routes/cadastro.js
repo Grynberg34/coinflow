@@ -43,7 +43,6 @@ router.post('/empresa', function(req, res) {
 
     connection.query(`SELECT COUNT(*) as number FROM funcionarios WHERE email = '${email}'`, function (err, rows, fields) {
       if (rows[0].number > 0) {
-        console.log(rows)
         res.render('cadastro_empresa', {userexists})
       } 
      

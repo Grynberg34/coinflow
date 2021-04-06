@@ -58,16 +58,6 @@ router.get('/:id', checkAuthentication, function(req, res) {
   else res.redirect('/')
 });
 
-router.get('/:id', checkAuthentication, function(req, res) {
-  var id = req.params.id;
-  var user_id = req.user.id;
-  var nome = req.user.nome_empresa;
-  if(user_id == id) {
-    res.render('admin', {user_id, nome})
-  }
-  else res.redirect('/')
-});
-
 router.get('/:id/funcionarios', checkAuthentication, function(req, res) {
   var id = req.params.id;
   var user_id = req.user.id;

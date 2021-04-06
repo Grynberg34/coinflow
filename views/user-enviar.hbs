@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <title>coinflow | {{nome}} | enviar outflow</title>
+    <title>coinflow | {{nome}} | enviar saldo</title>
 </head>
 <body>
 
@@ -30,14 +30,16 @@
                 </div>
 
                 <div class="individual">
+                    <h2 class="individual__msg">{{saldo}}{{notfound}}{{insuficiente}}</h2>
+                    <h1 class="individual__title">seu outflow: {{this.outflow}}{{new_outflow}}<img class="individual__coin" src="/images/fs.png" alt=""></h1>
                     <form id="form" method="POST">
-                        <label class="individual__label" for="user">selecionar funcionário</label>
+                        <label class="individual__label" for="user">selecionar usário</label>
                         <select class="individual__input" name="user" id="user">
                             
                             <option value="" selected disabled></option>
 
                             {{#each funcionarios}}
-                                <option value="{{this.id}}">{{this.nome}} (outflow: {{this.outflow}}f$)</option>
+                                <option value="{{this.id}}">{{this.nome}}</option>
                             {{/each}}
                         
                         </select>
@@ -59,7 +61,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="/scripts/animate_logo.js"></script>
-    <script src="/scripts/admin-individual.js"></script>
+    <script src="/scripts/user-enviar.js"></script>
 
 </body>
 </html>

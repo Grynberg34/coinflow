@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <link rel="stylesheet" href="/stylesheets/user.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/icons/font/flaticon.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
@@ -13,24 +14,66 @@
 </head>
 <body>
 
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
 
-                <div class="menu">
+            <div class="menu">
 
-                    <a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a>
-
-                    <h1 class="menu__title">em construção</h1>
-                    <h4 class="menu__type">funcionário</h4>
-
-                    <a href="/logout" class="menu__link">sair</a>
-
+                <div class="row">
+                    <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a></div>
+                    <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
+                    <div class="col-md-4"><a href="/logout" class="menu__link">sair</a></div>
                 </div>
 
+                <div class="row menu__options">
+
+                    <div class="col-5 menu__options__coins">
+
+                        <div class="menu__options__coins__flowin">
+                            <h1 class="menu__options__coins__flowin__title">flowin:</h1>
+                            <h1 class="menu__options__coins__flowin__value">{{this.flowin}} <img class="menu__options__coins__coin" src="/images/fs.png" alt=""></h1>
+                        </div>
+
+                        <div class="menu__options__coins__outflow">
+                            <h1 class="menu__options__coins__outflow__title">outflow:</h1>
+                            <h1 class="menu__options__coins__outflow__value">{{this.outflow}} <img class="menu__options__coins__coin" src="/images/fs.png" alt=""></h1>
+                        </div>
+
+                    </div>
+
+                    <div class="col-2"></div>
+                    <a class="col-5 menu__options__link" href="/user/{{user_id}}/enviar">
+                        <div class="menu__options__option" id="liberar">
+                            <i class="flaticon-salary menu__options__option__icon"></i>
+                            <h1 class="menu__options__option__title">enviar outflow</h1>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row menu__options">
+                    <a class="col-5 menu__options__link" href="/user/{{user_id}}/transferencias">
+                        <div class="menu__options__option" id="transferencias">
+                            <i class="flaticon-transfer menu__options__option__icon"></i>
+                            <h1 class="menu__options__option__title">transferências</h1>
+                        </div>
+                    </a>
+                    <div class="col-2"></div>
+                    <a class="col-5 menu__options__link" href="/user/{{user_id}}/recompensas">
+                        <div class="menu__options__option" id="recompensas">
+                            <i class="flaticon-gift-box-with-a-bow menu__options__option__icon"></i>
+                            <h1 class="menu__options__option__title">recompensas</h1>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="/logout" class="menu__link mobile__link">sair</a>
 
             </div>
+
         </div>
+    </div>
+
 
 
 
@@ -41,6 +84,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="/scripts/animate_logo.js"></script>
+    <script src="/scripts/user.js"></script>
 
 </body>
 </html>

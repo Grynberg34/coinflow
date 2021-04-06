@@ -16,6 +16,11 @@ código da empresa para cadastro de funcionários (presente na rota de listagem 
 
 6f7e5a9d-503b-4291-a7aa-2aa64c5d4460
 
+---- CONTA PARA TESTE DE INTERFACE DE FUNCIONÁRIO DE EMPRESA----
+
+email: franciscogb_34@yahoo.com.br
+senha: 12345678
+
 ---- PROPOSTA -----
 
 A proposta da aplicação é fornecer para empresas e seus funcionários uma ferramenta de merit money (moeda de mérito digital), de maneira que o bom trabalho de cada funcionário possa ser recompensado pelos seus próprios colegas. A cada mês é adicionado um saldo de saída (outflow) na moeda digital f$ para cada funcionário, de maneira que ele possa transferir valores em f$ para outros funcionários. Ao acumular saldo de entrada (flowin) em f$ o funcionário pode trocar valores acumulados de flowin por recompensas.
@@ -49,3 +54,8 @@ SPRINT 3 - MARÇO DE 2021
 2. Implementação de funcionalidade de adicionar recompensas (com nome, preço, imagem, estoque)
 3. Implementação de funcionalidade de remoção de recompensas cadastradas
 4. Implementação de funcionalidade de controle e edição de estoque de recompensas cadastradas
+
+SPRINT 4 - ABRIL DE 2021
+
+1. Implementação de interface do menu para funcionários de empresa com exibição de saldo (outflow e flowin)
+2. Implementação de funcionalidade de enviar saldo (outflow) para outros usuários
