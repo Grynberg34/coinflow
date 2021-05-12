@@ -1,6 +1,7 @@
 const express = require('express');
 const EnviosFuncionarioController = require('../controllers/EnviosFuncionarioController');
 const MenuFuncionarioController = require('../controllers/MenuFuncionarioController');
+const RecompensasFuncionarioController = require('../controllers/RecompensasFuncionarioController');
 const router = express.Router();
 
 function checkAuthentication(req,res,next){
@@ -28,5 +29,11 @@ router.get('/:id', checkAuthentication, MenuFuncionarioController.mostrarMenuIni
 router.get('/:id/enviar', checkAuthentication, EnviosFuncionarioController.mostrarMenuEnvioOutflow);
 
 router.post('/:id/enviar', checkAuthentication, EnviosFuncionarioController.enviarOutflow);
+
+router.get('/:id/recompensas', checkAuthentication, RecompensasFuncionarioController.mostrarMenuRecompensas);
+
+router.get('/:id/recompensas/visualizar', checkAuthentication, RecompensasFuncionarioController.mostrarRecompensas);
+
+router.post('/:id/recompensas/visualizar', checkAuthentication, RecompensasFuncionarioController.resgatarRecompensa);
 
 module.exports = router;
