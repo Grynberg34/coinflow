@@ -116,6 +116,41 @@ module.exports = {
         res.redirect(`/admin/${user_id}/recompensas/remover`)
       })
     }
+  },
+
+  mostrarResgates: function (req,res) {
+    var id = req.params.id;
+    var user_id = req.user.id;
+    var nome = req.user.nome_empresa;
+
+    if(user_id == id) {
+      Recompensa.mostrarTodasRecompensasResgatadas(user_id, function (err, recompensas, fields) {
+        if (err) res.render('error');
+        res.render('admin-resgates', {user_id, nome, recompensas})
+      })
+    }
+    else res.redirect('/')
+
+  },
+
+  confirmarEntregaRecompensa: function(req,res) {
+    var id = req.params.id;
+    var user_id = req.user.id;
+    var res_id = req.body.res_id;
+
+
+    if (user_id == id) {
+
+      Recompensa.confirmarEntrega(user_id, res_id, function (err) {
+        if (err) res.render ('error');
+        res.redirect(`/admin/${user_id}/recompensas/resgates`)
+        
+  
+      })
+
+    }
+    else redirect('/');
+
   }
 
 }

@@ -61,4 +61,8 @@ router.get('/:id/recompensas/remover', checkAuthentication, RecompensasEmpresaCo
 
 router.post('/:id/recompensas/remover', checkAuthentication, RecompensasEmpresaController.removerRecompensas);
 
+router.get('/:id/recompensas/resgates', checkAuthentication, RecompensasEmpresaController.mostrarResgates);
+
+router.post('/:id/recompensas/resgates', checkAuthentication, RecompensasEmpresaController.confirmarEntregaRecompensa);
+
 module.exports = router;

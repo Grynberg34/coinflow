@@ -1,0 +1,305 @@
+.menu {
+  margin-top: 25vh;
+  border: 3px solid #2bffd5;
+  border-radius: 72px;
+  padding-top: 8vh;
+  padding-bottom: 10vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.menu .menu__logo {
+  display: block;
+  margin-bottom: 4vh;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.menu .menu__title {
+  font-size: 34px;
+  color: #2bffd5;
+  font-weight: 800;
+  text-align: center;
+  user-select: none;
+  margin-bottom: 4vh;
+}
+
+.rotateInDownLeft {
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes rotateInDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes rotateInDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  25% {
+    -webkit-transform: scale3d(1.08, 1.08, 1.08);
+    transform: scale3d(1.08, 1.08, 1.08);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  75% {
+    -webkit-transform: scale3d(1.08, 1.08, 1.08);
+    transform: scale3d(1.08, 1.08, 1.08);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  25% {
+    -webkit-transform: scale3d(1.08, 1.08, 1.08);
+    transform: scale3d(1.08, 1.08, 1.08);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  75% {
+    -webkit-transform: scale3d(1.08, 1.08, 1.08);
+    transform: scale3d(1.08, 1.08, 1.08);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+body {
+  background-color: #00175d;
+  font-family: "Quicksand", sans-serif;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.menu {
+  border: none;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 10vh;
+  padding-bottom: 6vh;
+  padding-left: 0;
+  padding-right: 0;
+}
+.menu .menu__logo {
+  width: 90px;
+  margin-bottom: 0;
+}
+.menu .menu__title {
+  margin-bottom: 0;
+  margin-top: 1.2vh;
+}
+.menu .menu__type {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2bffd5;
+  text-align: center;
+  margin-bottom: 2vh;
+  user-select: none;
+}
+.menu .menu__link {
+  display: block;
+  color: #4472ff;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0.7vh;
+}
+.menu .menu__link:hover {
+  text-decoration: none;
+  color: #2bffd5;
+}
+.menu .mobile__link {
+  display: none;
+}
+.menu .menu__title {
+  font-size: 12px;
+  color: #2bffd5;
+  text-align: center;
+}
+
+.verde-claro {
+  color: #2bffd5 !important;
+}
+
+.recompensas {
+  margin-top: 4vh;
+}
+.recompensas .recompensas__table__head {
+  border-bottom: 2px solid #2bffd5;
+}
+.recompensas .recompensas__table__head .recompensas__table__head__title {
+  font-size: 9px;
+  color: #2bffd5;
+  text-align: center;
+}
+.recompensas .recompensas__table__data {
+  border-bottom: 2px solid #4472ff;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.recompensas .recompensas__table__data .recompensas__table__data__text {
+  display: inline-block;
+  font-size: 9px;
+  color: #4472ff;
+}
+.recompensas .recompensas__table__data .recompensas__table__data__button {
+  padding: 5px;
+  border: 2px solid #2bffd5;
+  color: #2bffd5;
+  background: none;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+.recompensas .recompensas__table__data .recompensas__table__data__button:focus {
+  outline: none;
+}
+.recompensas .recompensas__table__data .recompensas__table__data__button:hover {
+  color: #4472ff;
+  border: 2px solid #4472ff;
+}
+
+.form {
+  display: none;
+  margin-top: 6vh;
+}
+.form .form__label {
+  display: block;
+  font-size: 22px;
+  color: #4472ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form .form__input {
+  display: none;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+  border: none;
+  width: 14vw;
+}
+.form .form__input:focus {
+  outline: none;
+}
+.form .form__button {
+  font-size: 20px;
+  color: #2bffd5;
+  border: 2px solid #2bffd5;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 14vw;
+  background: none;
+}
+.form .form__button:hover {
+  color: #4472ff;
+  border: 2px solid #4472ff;
+}
+.form .form__button:focus {
+  outline: none;
+}
+
+.left {
+  text-align: left !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu {
+    border: none;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .menu .menu__logo {
+    margin-bottom: 2vh;
+    width: 80%;
+  }
+  .menu .menu__title {
+    font-size: 14px;
+  }
+  .menu .menu__link {
+    display: block;
+  }
+  .menu .mobile__link {
+    margin-top: 6vh;
+    display: block;
+  }
+
+  .recompensas {
+    margin-bottom: 8vh;
+  }
+  .recompensas .recompensas__table__data {
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+  }
+
+  .left {
+    text-align: center !important;
+  }
+}
+
+/*# sourceMappingURL=admin-resgates.css.map */

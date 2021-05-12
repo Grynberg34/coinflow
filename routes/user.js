@@ -36,4 +36,6 @@ router.get('/:id/recompensas/visualizar', checkAuthentication, RecompensasFuncio
 
 router.post('/:id/recompensas/visualizar', checkAuthentication, RecompensasFuncionarioController.resgatarRecompensa);
 
+router.get('/:id/recompensas/resgates', checkAuthentication, RecompensasFuncionarioController.mostrarResgates);
+
 module.exports = router;

@@ -37,5 +37,17 @@ module.exports={
 
     darBaixaEstoque: function (recompensa) {
         connection.query(`UPDATE recompensas SET estoque = estoque - 1 WHERE id = ${recompensa[0].id}`);
-    }
+    },
+
+    mostrarRecompensasResgatadas: function (user_id, empresa_id, callback) {
+        connection.query(`SELECT * FROM resgates WHERE id_empresa = '${empresa_id}' AND id_funcionario = '${user_id}' ORDER BY id DESC`, callback);
+    },
+
+    mostrarTodasRecompensasResgatadas: function (user_id, callback) {
+        connection.query(`SELECT * FROM resgates where id_empresa = '${user_id}' ORDER BY id DESC`, callback);
+    },
+
+    confirmarEntrega: function(user_id, res_id, callback) {
+        connection.query(`UPDATE resgates SET status_entrega = 'entrega realizada' WHERE id_empresa = '${user_id}' and id = '${res_id}'`, callback)
+    } 
 }
