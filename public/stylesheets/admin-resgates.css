@@ -293,8 +293,10 @@ body {
     margin-bottom: 8vh;
   }
   .recompensas .recompensas__table__data {
-    margin-bottom: 2vh;
     margin-top: 2vh;
+  }
+  .recompensas .recompensas__table__data .recompensas__table__data__button {
+    margin-left: 0;
   }
 
   .left {

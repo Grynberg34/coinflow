@@ -217,9 +217,13 @@ body {
         margin-bottom: 8vh;
 
         .recompensas__table__data {
-            margin-bottom: 2vh;
             margin-top: 2vh;
+
+            .recompensas__table__data__button {
+                margin-left: 0;
+            }
         }
+
     }
 
     .left {
