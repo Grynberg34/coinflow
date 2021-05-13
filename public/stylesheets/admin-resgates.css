@@ -294,6 +294,7 @@ body {
   }
   .recompensas .recompensas__table__data {
     margin-top: 2vh;
+    padding-bottom: 1vh;
   }
   .recompensas .recompensas__table__data .recompensas__table__data__button {
     margin-left: 0;
@@ -301,6 +302,10 @@ body {
 
   .left {
     text-align: center !important;
+  }
+
+  .form .form__button {
+    width: 40vw;
   }
 }
 
