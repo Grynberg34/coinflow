@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/user-transferencias-todas.css">
+    <link rel="stylesheet" href="/icons/font/flaticon.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>coinflow | funcionário</title>
+</head>
+<body>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+                <div class="menu">
+
+                    <div class="row">
+                        <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a></div>
+                        <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
+                        <div class="col-md-2"><a href="/user/{{user_id}}/transferencias" class="menu__link">voltar</a></div>
+                        <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
+                    </div>
+
+                </div>
+
+
+                <div class="transferencias" id="transf-list">
+
+                    <h1 class="transferencias__title">todas as transferências</h1>
+
+                    <div class="dropdown transferencias__dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            filtrar por:
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <button class="sort dropdown-item" data-sort="remetente" data-order="asc">remetente (A-Z)</button>
+                            <button class="sort dropdown-item" data-sort="remetente" data-order="desc">remetente (Z-A)</button>
+                            <button class="sort dropdown-item" data-sort="destinatario" data-order="asc">destinatário (A-Z)</button>
+                            <button class="sort dropdown-item" data-sort="destinatario" data-order="desc">destinatário (Z-A)</button>
+                            <button class="sort dropdown-item" data-sort="data" data-order="asc">data (antigo - novo)</button>
+                            <button class="sort dropdown-item" data-sort="data" data-order="desc">data (novo - antigo)</button>
+                        </div>
+                    </div>
+
+                    <div class="transferencias__table__head row">
+
+                        <div class="col-2"><h1 class="transferencias__table__head__title">remetente</h1></div>
+                        <div class="col-2"><h1 class="transferencias__table__head__title">destinatário</h1></div>
+                        <div class="col-2"><h1 class="transferencias__table__head__title">data</h1></div>
+                        <div class="col-3"><h1 class="transferencias__table__head__title">valor</h1></div>
+                        <div class="col-3"><h1 class="transferencias__table__head__title">motivo</h1></div>
+
+                    </div>
+
+                    <div class="list">
+                        {{#each transferencias}} 
+
+                            <div class="transferencias__table__data row">
+
+                                <div class="col-2"><p class="transferencias__table__data__text remetente">{{this.remetente}}</p></div>
+                                <div class="col-2"><p class="transferencias__table__data__text destinatario">{{this.destinatario}}</p></div>
+                                <div class="col-2"><p class="transferencias__table__data__text data">{{this.data}}</p></div>
+                                <div class="col-3"><p class="transferencias__table__data__text">{{this.valor}}</p><img src="/images/fs.png" alt="" class="transferencias__table__data__coin"></div>
+                                <div class="col-3"><p class="transferencias__table__data__text motivo">{{this.motivo}}</p></div>
+                            </div>
+
+                        {{/each}}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    <!--Bootstrap-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+    <script src="/scripts/animate_logo.js"></script>
+    <script src="/scripts/user-transferencias-todas.js"></script>
+
+</body>
+</html>

@@ -2,6 +2,7 @@ const express = require('express');
 const EnviosFuncionarioController = require('../controllers/EnviosFuncionarioController');
 const MenuFuncionarioController = require('../controllers/MenuFuncionarioController');
 const RecompensasFuncionarioController = require('../controllers/RecompensasFuncionarioController');
+const TransferenciasFuncionarioController = require('../controllers/TransferenciasFuncionarioController');
 const router = express.Router();
 
 function checkAuthentication(req,res,next){
@@ -37,5 +38,11 @@ router.get('/:id/recompensas/visualizar', checkAuthentication, RecompensasFuncio
 router.post('/:id/recompensas/visualizar', checkAuthentication, RecompensasFuncionarioController.resgatarRecompensa);
 
 router.get('/:id/recompensas/resgates', checkAuthentication, RecompensasFuncionarioController.mostrarResgates);
+
+router.get('/:id/transferencias', checkAuthentication, TransferenciasFuncionarioController.mostrarMenuTransferencias);
+
+router.get('/:id/transferencias/minhas', checkAuthentication, TransferenciasFuncionarioController.mostrarTransferenciasFuncionario);
+
+router.get('/:id/transferencias/todas', checkAuthentication, TransferenciasFuncionarioController.mostrarTransferenciasTodas);
 
 module.exports = router;

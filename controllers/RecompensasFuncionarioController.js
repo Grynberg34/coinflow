@@ -15,12 +15,12 @@ module.exports = {
     mostrarRecompensas: function (req,res) {
         var id = req.params.id;
         var user_id = req.user.id;
-        var empresa_id = req.user.id_empresa;
+        var id_empresa = req.user.id_empresa;
         var nome = req.user.nome;
         var flowin = req.user.flowin;
 
         if(user_id == id) {
-            Recompensa.selecionarRecompensasDisponiveis (empresa_id, function (err, recompensas, fields) {
+            Recompensa.selecionarRecompensasDisponiveis (id_empresa, function (err, recompensas, fields) {
                 if (err) res.render('error');
                 res.render('user-visualizar', {user_id, nome, recompensas, flowin})
 
@@ -35,19 +35,19 @@ module.exports = {
     resgatarRecompensa: function(req,res) {
         var id = req.params.id;
         var user_id = req.user.id;
-        var empresa_id = req.user.id_empresa;
+        var id_empresa = req.user.id_empresa;
         var nome = req.user.nome;
         var flowin = req.user.flowin;
         var rec_id = req.body.rec_id;
 
         if (user_id == id) {
-            Recompensa.checarRecompensa(rec_id, empresa_id, function (err, recompensa, fields) {
+            Recompensa.checarRecompensa(rec_id, id_empresa, function (err, recompensa, fields) {
                 if (err) res.redirect(`/user/${user_id}/recompensas/visualizar`)
     
     
                 else {
                     if (flowin >= recompensa[0].preço) {
-                        Recompensa.registrarResgateRecompensa(user_id, empresa_id, recompensa, nome);
+                        Recompensa.registrarResgateRecompensa(user_id, id_empresa, recompensa, nome);
                         Recompensa.descontarFlowin(user_id, recompensa);
                         Recompensa.darBaixaEstoque(recompensa);
                         res.redirect(`/user/${user_id}/recompensas/resgates`)
@@ -70,14 +70,12 @@ module.exports = {
         var id = req.params.id;
         var user_id = req.user.id;
         var nome = req.user.nome;
-        var empresa_id = req.user.id_empresa;
+        var id_empresa = req.user.id_empresa;
 
         if(user_id == id) {
-            Recompensa.mostrarRecompensasResgatadas(user_id, empresa_id, function (err, recompensas, fields){
+            Recompensa.mostrarRecompensasResgatadas(user_id, id_empresa, function (err, recompensas, fields){
                 if (err) res.render('error');
-                res.render('user-resgates', {user_id, nome, recompensas})
-                
-                
+                res.render('user-resgates', {user_id, nome, recompensas})          
 
             })
         }
