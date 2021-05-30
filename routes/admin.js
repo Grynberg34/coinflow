@@ -4,6 +4,7 @@ const MenuEmpresaController = require("../controllers/MenuEmpresaController");
 const EnviosEmpresaController = require('../controllers/EnviosEmpresaController');
 const ListarDeletarEmpresaController = require('../controllers/ListarDeletarEmpresaController');
 const RecompensasEmpresaController = require('../controllers/RecompensasEmpresaController');
+const TransferenciasEmpresaController = require('../controllers/TransferenciasEmpresaController');
 
 function checkAuthentication(req,res,next){
   if (req.isAuthenticated()) {
@@ -64,5 +65,7 @@ router.post('/:id/recompensas/remover', checkAuthentication, RecompensasEmpresaC
 router.get('/:id/recompensas/resgates', checkAuthentication, RecompensasEmpresaController.mostrarResgates);
 
 router.post('/:id/recompensas/resgates', checkAuthentication, RecompensasEmpresaController.confirmarEntregaRecompensa);
+
+router.get('/:id/transferencias', checkAuthentication, TransferenciasEmpresaController.mostrarTransferenciasTodas);
 
 module.exports = router;

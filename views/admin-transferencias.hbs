@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/user-transferencias-todas.css">
+    <link rel="stylesheet" href="/stylesheets/admin-transferencias.css">
     <link rel="stylesheet" href="/icons/font/flaticon.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <title>coinflow | funcionário</title>
+    <title>coinflow | {{nome}} | empresa</title>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a></div>
                         <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
-                        <div class="col-md-2"><a href="/user/{{user_id}}/transferencias" class="menu__link">voltar</a></div>
+                        <div class="col-md-2"><a href="/admin/{{user_id}}" class="menu__link">voltar</a></div>
                         <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
                     </div>
 
@@ -87,7 +87,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 
     <script src="/scripts/animate_logo.js"></script>
-    <script src="/scripts/user-transferencias-todas.js"></script>
+    <script src="/scripts/admin-transferencias.js"></script>
 
 </body>
 </html>

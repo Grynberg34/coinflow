@@ -68,3 +68,10 @@ SPRINT 5 - MAIO DE 2021
 4. Implementação de interface com histórico de resgates para o funcionário logado
 5. Implementação de interface com histórico de todos os resgates realizados por funcionários para admins de contas de empresa
 6. Impementação de funcionalidade de confirmação de entrega de recompensa a funcionário para admins de contas de empresa
+
+SPRINT 6 - JUNHO DE 2021
+
+1. Implementação de menu de transferências para funcionários de empresa
+2. Implementação de interface de transferências enviadas e recebidas pelo funcionário
+3. Implementação de interface para funcionários de empresa com todas as transferências realizadas por funcionários de uma empresa
+4. Implementação de interface para admins de empresa com todas as transferências realizadas por funcionários de uma empresa

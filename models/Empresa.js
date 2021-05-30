@@ -62,5 +62,9 @@ module.exports={
 
     mostrarHistoricoEnvioIndividual: function(user_id, callback) {
         connection.query(`SELECT * FROM envios WHERE id_empresa = '${user_id}' and tipo = 'individual' ORDER BY id DESC `, callback);
+    },
+
+    selecionarTransferenciasTodas: function (user_id, callback) {
+        connection.query(`SELECT valor, data, motivo, d.nome as destinatario, r.nome as remetente FROM transferencias INNER JOIN funcionarios AS r ON transferencias.id_remetente = r.id  INNER JOIN funcionarios as d ON transferencias.id_destinatario = d.id WHERE transferencias.id_empresa = '${user_id}' ORDER BY data DESC`, callback);
     }
 }
