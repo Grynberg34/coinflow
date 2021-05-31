@@ -148,7 +148,7 @@ app.use(function(err, req, res, next) {
 // Listen to port 3000
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
-    console.log('Umbler listening on port 3000', port);
+    console.log('Listening on port 3000', port);
 });
 
 module.exports = app;

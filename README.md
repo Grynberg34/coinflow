@@ -4,8 +4,8 @@ A aplicação está sendo desenvolvida em Node.js com uso de database MYSQL e ex
 
 ---- USUÁRIO E SENHA DA DATABASE PARA TESTES LOCAIS ----
 
-Usuário: admin001
-Senha: meritmoney3
+Usuário: adminf3
+Senha: meritmoney3@
 
 ---- CONTA PARA TESTE DE INTERFACE DE ADMINISTRADOR DE EMPRESA ----
 
