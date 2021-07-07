@@ -23,15 +23,15 @@ module.exports = {
       Empresa.checarDuplicado(email, function(err,rows){
 
         if (rows[0].number > 0) {
-          res.render('cadastro_empresa', {userexists});
+          res.status(400).render('cadastro_empresa', {userexists});
         } 
         
         else {
           var hashedpassword = bcrypt.hashSync(password, 10);
           Empresa.salvarDadosCadastrais(name, email, areas, code, hashedpassword, function (err) {
-          if (err) res.render('cadastro_empresa', {userexists});
+          if (err) res.status(400).render('cadastro_empresa', {userexists});
           else {
-          res.redirect('/login/empresa')};
+          res.status(201).redirect('/login/empresa')};
           });
         }
         
@@ -39,7 +39,7 @@ module.exports = {
 
     }
   
-    else res.render('cadastro_empresa', {passdontmatch}) 
+    else res.status(400).render('cadastro_empresa', {passdontmatch}) 
 
   },
 

@@ -18,26 +18,26 @@ module.exports= {
   
   
     Funcionario.checarCodigo(code, function (err, empresa, fields) {
-      if (err) res.render('cadastro_funcionario', {invalidcode})
+      if (err) res.status(400).render('cadastro_funcionario', {invalidcode})
       else {
         if (password == repeat) {
           var id_empresa = empresa[0].id;
           Funcionario.checarDuplicado(email, function (err, rows, fields) {
             if (rows[0].number > 0) {
-              res.render('cadastro_funcionario', {userexists})
+              res.status(400).render('cadastro_funcionario', {userexists})
             } 
             else {
               var hashedpassword = bcrypt.hashSync(password, 10);
               Funcionario.salvarDadosCadastrais(name, email, id_empresa,hashedpassword, function (err) {
-                if (err) res.render('cadastro_funcionario', {userexists})
+                if (err) res.status(400).render('cadastro_funcionario', {userexists})
                 else {
-                res.redirect('/login/funcionario')}
+                res.status(201).redirect('/login/funcionario')}
               });
             }
           })
   
         } 
-        else res.render('cadastro_funcionario', {passdontmatch}) 
+        else res.status(400).render('cadastro_funcionario', {passdontmatch}) 
       }
   
     })
