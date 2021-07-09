@@ -10,7 +10,7 @@ describe('Cadastro de funcionário', function() {
         .send({
             "name": "Usuário Z",
             "email": "usuarioz@gmail.com",
-            "code": "585e9385-7e15-438b-982c-9eb98f097bab",
+            "code": "757a8669-5a53-4d27-9092-6604271dbb96",
             "password": "12345678",
             "repeatpassword": "12345678"
         })
@@ -20,5 +20,46 @@ describe('Cadastro de funcionário', function() {
 
     });
 
+    it('tenta realizar cadastro com código de empresa inválido (status: 400)', async function() {
+
+        await request.post('/cadastro/funcionario')
+        .send({
+            "name": "Usuário Z",
+            "email": "usuarioz@gmail.com",
+            "code": "000",
+            "password": "12345678",
+            "repeatpassword": "12345678"
+        })
+        .expect(400)
+
+    });
+
+    it('tenta realizar cadastro com senhas diferentes entre si (status: 400)', async function() {
+
+        await request.post('/cadastro/funcionario')
+        .send({
+            "name": "Usuário Z",
+            "email": "usuarioz@gmail.com",
+            "code": "585e9385-7e15-438b-982c-9eb98f097bab",
+            "password": "12345678",
+            "repeatpassword": "senha123"
+        })
+        .expect(400)
+
+    });
+    
+    it('tenta realizar cadastro com email previamente cadastrado (status: 400)', async function() {
+
+        await request.post('/cadastro/funcionario')
+        .send({
+            "name": "Usuário Z",
+            "email": "franciscogb_34@yahoo.com.br",
+            "code": "585e9385-7e15-438b-982c-9eb98f097bab",
+            "password": "12345678",
+            "repeatpassword": "12345678"
+        })
+        .expect(400)
+
+    });
 });
 

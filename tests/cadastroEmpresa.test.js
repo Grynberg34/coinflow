@@ -19,4 +19,30 @@ describe('Cadastro de empresa', function() {
 
     });
 
+    it('tenta realizar o cadastro com email cadastrado na database (código: 400)', async function() {
+
+        await request.post('/cadastro/empresa')
+        .send({
+            "name": "Empresa Teste Z",
+            "email": "franciscogrynberg34@gmail.com",
+            "password": "12345678",
+            "repeatpassword": "12345678"
+        })
+        .expect(400);
+
+    });
+
+    it('tenta realizar o cadastro com senhas diferentes entre si (código: 400)', async function() {
+
+        await request.post('/cadastro/empresa')
+        .send({
+            "name": "Empresa Teste Z",
+            "email": "empresaz@gmail.com",
+            "password": "12345678",
+            "repeatpassword": "senha123"
+        })
+        .expect(400);
+
+    });
+
 });

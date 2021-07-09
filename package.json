@@ -2,7 +2,7 @@
   "name": "coinflow",
   "version": "0.0.1",
   "scripts": {
-    "start": "node app.js",
+    "start": "node start.js",
     "test": "jest --forceExit"
   },
   "dependencies": {
