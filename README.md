@@ -2,10 +2,12 @@ Trabalho realizado na Disciplina de Projeto Integrado de Aplicações da Pós-Gr
 
 A aplicação está sendo desenvolvida em Node.js com uso de database MYSQL e extensão de linguagem SASS para CSS 3.0.
 
----- USUÁRIO E SENHA DA DATABASE PARA TESTES LOCAIS ----
+---- CONFIGURAÇÕES DA DATABASE ----
 
-Usuário: adminf3
-Senha: meritmoney3@
+DB_HOST=coinflow.mysql.uhserver.com
+DB_USER=adminf3
+DB_PASS=meritmoney3@
+DB_NAME=coinflow
 
 ---- CONTA PARA TESTE DE INTERFACE DE ADMINISTRADOR DE EMPRESA ----
 
@@ -20,6 +22,39 @@ código da empresa para cadastro de funcionários (presente na rota de listagem 
 
 email: franciscogb_34@yahoo.com.br
 senha: 12345678
+
+---- TESTES UNITÁRIOS -----
+
+Para a realização de testes unitários, basta inserir a configuração da database própria para testes no arquivo .env. Essa database têm a mesma estrutura de dados da database oficial da aplicação. 
+
+DB_HOST=coinflow-testes.mysql.uhserver.com
+DB_USER=adminf6
+DB_PASS=meritmoney6@
+DB_NAME=coinflow_testes
+
+Comando para testes: npm test
+
+TESTES INCLUÍDOS
+
+- Testes de cadastro de empresa
+- Testes de cadastro de funcionário
+- Testes de login de empresa
+- Testes de login de funcionário
+
+TESTES PLANEJADOS
+
+- Testes de redefinição de senha para admin de empresa
+- Testes de redefinição de senha para funcionário de empresa
+- Testes de envio de saldo mensal para funcionários de empresa (conta admin de empresa)
+- Testes de envio de saldo individual para funcionário (conta admin de empresa)
+- Testes de edição de valor mensal para funcionários (conta admin de empresa)
+- Testes de exclusão de funcionários cadastrados (conta admin de empresa)
+- Testes de cadastro de recompensas (conta admin de empresa)
+- Testes de edição de estoque de recompensas (conta admin de empresa)
+- Testes de exclusão de recompensas cadastradas (conta admin de empresa)
+- Testes de envio de saldo para outro funcionário (conta funcionário)
+- Testes de resgate de recompensa (conta funcionário)
+
 
 ---- PROPOSTA -----
 

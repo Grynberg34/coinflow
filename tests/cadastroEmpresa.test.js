@@ -19,12 +19,25 @@ describe('Cadastro de empresa', function() {
 
     });
 
-    it('tenta realizar o cadastro com email cadastrado na database (código: 400)', async function() {
+    it('tenta realizar o cadastro com email anteriormente cadastrado na database (código: 400)', async function() {
 
         await request.post('/cadastro/empresa')
         .send({
             "name": "Empresa Teste Z",
             "email": "franciscogrynberg34@gmail.com",
+            "password": "12345678",
+            "repeatpassword": "12345678"
+        })
+        .expect(400);
+
+    });
+
+    it('tenta realizar o cadastro com nome anteriormente cadastrado na database (código: 400)', async function() {
+
+        await request.post('/cadastro/empresa')
+        .send({
+            "name": "Empresa 1",
+            "email": "empresaz@gmail.com",
             "password": "12345678",
             "repeatpassword": "12345678"
         })
@@ -45,4 +58,6 @@ describe('Cadastro de empresa', function() {
 
     });
 
+
+    
 });
