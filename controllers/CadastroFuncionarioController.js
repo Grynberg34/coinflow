@@ -12,13 +12,12 @@ module.exports= {
     var code = req.body.code;
     var password = req.body.password;
     var repeat = req.body.repeatpassword;
-    var userexists = "Esse email ou nome já foi utilizado por outro usuário";
+    var userexists = "Esse email ou nome já foi utilizado por outro usuário.";
     var passdontmatch = "As senhas não coincidem.";
     var invalidcode = 'Código da empresa inválido.';
   
-  
     Funcionario.checarCodigo(code, function (err, empresa, fields) {
-      if (err) res.status(400).render('cadastro_funcionario', {invalidcode})
+      if (err || empresa.length < 1) res.status(400).render('cadastro_funcionario', {invalidcode})
       else {
         if (password == repeat) {
           var id_empresa = empresa[0].id;
@@ -31,7 +30,7 @@ module.exports= {
               Funcionario.salvarDadosCadastrais(name, email, id_empresa,hashedpassword, function (err) {
                 if (err) res.status(400).render('cadastro_funcionario', {userexists})
                 else {
-                res.status(201).redirect('/login/funcionario')}
+                res.status(302).redirect('/login/funcionario')}
               });
             }
           })

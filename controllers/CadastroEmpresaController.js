@@ -13,11 +13,9 @@ module.exports = {
     var code = uuidv4();
     var password = req.body.password;
     var repeat = req.body.repeatpassword;
-    var userexists = "esse email já foi utilizado por outro usuário";
-    var passdontmatch = "as senhas não coincidem";
+    var userexists = "esse email já foi utilizado por outro usuário.";
+    var passdontmatch = "as senhas não coincidem.";
   
-      
-
     if (password == repeat) {
   
       Empresa.checarDuplicado(email, function(err,rows){
