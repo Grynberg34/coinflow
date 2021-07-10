@@ -31,25 +31,25 @@
                 </div>
 
 
-                <div class="recompensas">
+                <div class="recompensas" role="table">
 
-                    <div class="recompensas__table__head row">
+                    <div role="row" class="recompensas__table__head row">
 
-                        <div class="col-3"><h1 class="recompensas__table__head__title">nome da recompensa</h1></div>
-                        <div class="col-3"><h1 class="recompensas__table__head__title">preço</h1></div>
-                        <div class="col-3"><h1 class="recompensas__table__head__title">data</h1></div>
-                        <div class="col-3"><h1 class="recompensas__table__head__title">status entrega</h1></div>
+                        <div role="columnheader" class="col-3"><h1 class="recompensas__table__head__title">nome da recompensa</h1></div>
+                        <div role="columnheader" class="col-3"><h1 class="recompensas__table__head__title">preço</h1></div>
+                        <div role="columnheader" class="col-3"><h1 class="recompensas__table__head__title">data</h1></div>
+                        <div role="columnheader" class="col-3"><h1 class="recompensas__table__head__title">status entrega</h1></div>
 
                     </div>
 
                     {{#each recompensas}} 
 
-                        <div class="recompensas__table__data row">
+                        <div role="row" class="recompensas__table__data row">
 
-                            <div class="col-3 left"><p class="recompensas__table__data__text">{{this.nome_recompensa}}</p></div>
-                            <div class="col-3"><p class="recompensas__table__data__text">{{this.valor_recompensa}}</p> <img src="/images/fs.png" alt="moeda coinflow" class="recompensas__table__data__coin"></div>
-                            <div class="col-3"><p class="recompensas__table__data__text data">{{this.data_resgate}}</p></div>
-                            <div class="col-3"><p class="recompensas__table__data__text">{{this.status_entrega}}</p></div>
+                            <div role="cell" class="col-3 left"><p class="recompensas__table__data__text">{{this.nome_recompensa}}</p></div>
+                            <div role="cell" class="col-3"><p class="recompensas__table__data__text">{{this.valor_recompensa}}</p> <img src="/images/fs.png" alt="moeda coinflow" class="recompensas__table__data__coin"></div>
+                            <div role="cell" class="col-3"><p class="recompensas__table__data__text data">{{this.data_resgate}}</p></div>
+                            <div role="cell" class="col-3"><p class="recompensas__table__data__text">{{this.status_entrega}}</p></div>
 
                         </div>
 

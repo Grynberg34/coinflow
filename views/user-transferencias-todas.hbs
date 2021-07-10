@@ -31,42 +31,42 @@
                 </div>
 
 
-                <div class="transferencias" id="transf-list">
+                <div class="transferencias" id="transf-list" role="table">
 
                     <div class="dropdown transferencias__dropdown">
                         <button role="button" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             filtrar por:
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <button role="button" class="sort dropdown-item" data-sort="remetente" data-order="asc">remetente (A-Z)</button>
-                            <button role="button" class="sort dropdown-item" data-sort="remetente" data-order="desc">remetente (Z-A)</button>
-                            <button role="button" class="sort dropdown-item" data-sort="destinatario" data-order="asc">destinatário (A-Z)</button>
-                            <button role="button" class="sort dropdown-item" data-sort="destinatario" data-order="desc">destinatário (Z-A)</button>
-                            <button role="button" class="sort dropdown-item" data-sort="data" data-order="asc">data (antigo - novo)</button>
-                            <button role="button" class="sort dropdown-item" data-sort="data" data-order="desc">data (novo - antigo)</button>
+                            <button aria-sort="ascending" role="button" class="sort dropdown-item" data-sort="remetente" data-order="asc">remetente (A-Z)</button>
+                            <button aria-sort="descending" role="button" class="sort dropdown-item" data-sort="remetente" data-order="desc">remetente (Z-A)</button>
+                            <button aria-sort="ascending" role="button" class="sort dropdown-item" data-sort="destinatario" data-order="asc">destinatário (A-Z)</button>
+                            <button aria-sort="descending" role="button" class="sort dropdown-item" data-sort="destinatario" data-order="desc">destinatário (Z-A)</button>
+                            <button aria-sort="ascending" role="button" class="sort dropdown-item" data-sort="data" data-order="asc">data (antigo - novo)</button>
+                            <button aria-sort="descending" role="button" class="sort dropdown-item" data-sort="data" data-order="desc">data (novo - antigo)</button>
                         </div>
                     </div>
 
-                    <div class="transferencias__table__head row">
+                    <div role="row" class="transferencias__table__head row">
 
-                        <div class="col-2"><h1 class="transferencias__table__head__title">remetente</h1></div>
-                        <div class="col-2"><h1 class="transferencias__table__head__title">destinatário</h1></div>
-                        <div class="col-2"><h1 class="transferencias__table__head__title">data</h1></div>
-                        <div class="col-3"><h1 class="transferencias__table__head__title">valor</h1></div>
-                        <div class="col-3"><h1 class="transferencias__table__head__title">motivo</h1></div>
+                        <div role="columnheader" class="col-2"><h1 class="transferencias__table__head__title">remetente</h1></div>
+                        <div role="columnheader" class="col-2"><h1 class="transferencias__table__head__title">destinatário</h1></div>
+                        <div role="columnheader" class="col-2"><h1 class="transferencias__table__head__title">data</h1></div>
+                        <div role="columnheader" class="col-3"><h1 class="transferencias__table__head__title">valor</h1></div>
+                        <div role="columnheader" class="col-3"><h1 class="transferencias__table__head__title">motivo</h1></div>
 
                     </div>
 
                     <div class="list">
                         {{#each transferencias}} 
 
-                            <div class="transferencias__table__data row">
+                            <div role="row" class="transferencias__table__data row">
 
-                                <div class="col-2"><p class="transferencias__table__data__text remetente">{{this.remetente}}</p></div>
-                                <div class="col-2"><p class="transferencias__table__data__text destinatario">{{this.destinatario}}</p></div>
-                                <div class="col-2"><p class="transferencias__table__data__text data">{{this.data}}</p></div>
-                                <div class="col-3"><p class="transferencias__table__data__text">{{this.valor}}</p><img src="/images/fs.png" alt="moeda coinflow" class="transferencias__table__data__coin"></div>
-                                <div class="col-3"><p class="transferencias__table__data__text motivo">{{this.motivo}}</p></div>
+                                <div role="cell" class="col-2"><p class="transferencias__table__data__text remetente">{{this.remetente}}</p></div>
+                                <div role="cell" class="col-2"><p class="transferencias__table__data__text destinatario">{{this.destinatario}}</p></div>
+                                <div role="cell" class="col-2"><p class="transferencias__table__data__text data">{{this.data}}</p></div>
+                                <div role="cell" class="col-3"><p class="transferencias__table__data__text">{{this.valor}}</p><img src="/images/fs.png" alt="moeda coinflow" class="transferencias__table__data__coin"></div>
+                                <div role="cell" class="col-3"><p class="transferencias__table__data__text motivo">{{this.motivo}}</p></div>
                             </div>
 
                         {{/each}}

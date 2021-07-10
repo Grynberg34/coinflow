@@ -59,26 +59,26 @@
                 </div>
 
 
-                <div class="transferencias">
+                <div class="transferencias" role="table">
 
                     <h1 class="transferencias__title">enviadas</h1>
 
-                    <div class="transferencias__table__head row">
+                    <div role="row" class="transferencias__table__head row">
 
-                        <div class="col-3"><h1 class="transferencias__table__head__title">destinatário</h1></div>
-                        <div class="col-2"><h1 class="transferencias__table__head__title">data</h1></div>
-                        <div class="col-3"><h1 class="transferencias__table__head__title">valor</h1></div>
-                        <div class="col-4"><h1 class="transferencias__table__head__title">motivo</h1></div>
+                        <div role="columnheader" class="col-3"><h1 class="transferencias__table__head__title">destinatário</h1></div>
+                        <div role="columnheader" class="col-2"><h1 class="transferencias__table__head__title">data</h1></div>
+                        <div role="columnheader" class="col-3"><h1 class="transferencias__table__head__title">valor</h1></div>
+                        <div role="columnheader" class="col-4"><h1 class="transferencias__table__head__title">motivo</h1></div>
 
                     </div>
 
                     {{#each enviadas}} 
 
-                        <div class="transferencias__table__data row">
-                            <div class="col-3"><p class="transferencias__table__data__text">{{this.nome}}</p></div>
-                            <div class="col-2"><p class="transferencias__table__data__text data">{{this.data}}</p></div>
-                            <div class="col-3"><p class="transferencias__table__data__text">{{this.valor}}</p><img src="/images/fs.png" alt="moeda coinflow" class="transferencias__table__data__coin"></div>
-                            <div class="col-4"><p class="transferencias__table__data__text motivo">{{this.motivo}}</p></div>
+                        <div role="row" class="transferencias__table__data row">
+                            <div role="cell" class="col-3"><p class="transferencias__table__data__text">{{this.nome}}</p></div>
+                            <div role="cell" class="col-2"><p class="transferencias__table__data__text data">{{this.data}}</p></div>
+                            <div role="cell" class="col-3"><p class="transferencias__table__data__text">{{this.valor}}</p><img src="/images/fs.png" alt="moeda coinflow" class="transferencias__table__data__coin"></div>
+                            <div role="cell" class="col-4"><p class="transferencias__table__data__text motivo">{{this.motivo}}</p></div>
                         </div>
 
                     {{/each}}

@@ -30,7 +30,7 @@
 
                 </div>
 
-                <div class="mensal">
+                <div class="mensal" role="table">
 
                     <h1 class="mensal__title">enviar saldo mensal</h1>
 
@@ -39,18 +39,18 @@
                         <h2 class="mensal__date">último envio: <span class="mensal__date__timestamp">{{this.data}}</span></h2>
                     {{/each}}
 
-                    <div class="mensal__table__head row">
-                        <div class="col-6 col-md-4"><h1 class="mensal__table__head__title left">nome completo</h1></div>
-                        <div class="col-md-4 email"><h1 class="mensal__table__head__title left">email</h1></div>
-                        <div class="col-6 col-md-4"><h1 class="mensal__table__head__title">saldo mensal</h1></div>
+                    <div role="row" class="mensal__table__head row">
+                        <div role="columnheader"  class="col-6 col-md-4"><h1 class="mensal__table__head__title left">nome completo</h1></div>
+                        <div role="columnheader" class="col-md-4 email"><h1 class="mensal__table__head__title left">email</h1></div>
+                        <div role="columnheader" class="col-6 col-md-4"><h1 class="mensal__table__head__title">saldo mensal</h1></div>
 
                     </div>
 
                     {{#each funcionarios}}
-                        <div class="mensal__table__data row">
-                            <div class="col-6 col-md-4"><h1 class="mensal__table__data__text">{{this.nome}}</h1></div>
-                            <div class="col-md-4 email"><h1 class="mensal__table__data__text">{{this.email}}</h1></div>
-                            <div class="col-6 col-md-4"><div class="mensal__table__data__row"><h1 class="mensal__table__data__text">{{this.saldo_mensal}}</h1><img class="mensal__table__data__coin" src="/images/fs.png" alt="moeda coinflow"></div></div>
+                        <div role="row" class="mensal__table__data row">
+                            <div role="cell" class="col-6 col-md-4"><h1 class="mensal__table__data__text">{{this.nome}}</h1></div>
+                            <div role="cell" class="col-md-4 email"><h1 class="mensal__table__data__text">{{this.email}}</h1></div>
+                            <div role="cell" class="col-6 col-md-4"><div class="mensal__table__data__row"><h1 class="mensal__table__data__text">{{this.saldo_mensal}}</h1><img class="mensal__table__data__coin" src="/images/fs.png" alt="moeda coinflow"></div></div>
                         </div>
                     {{/each}}
 

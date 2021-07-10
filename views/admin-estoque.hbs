@@ -30,25 +30,25 @@
 
                 </div>
 
-                <div class="estoque" aria-live="polite">
+                <div class="estoque" aria-live="polite" role="table">
 
                     <h1 class="estoque__title">editar estoque</h1>
 
-                    <div class="estoque__table__head row">
-                        <div class="col-4"><h1 class="estoque__table__head__title left">nome</h1></div>
-                        <div class="col-2"><h1 class="estoque__table__head__title">imagem</h1></div>
-                        <div class="col-2"><h1 class="estoque__table__head__title">preço</h1></div>
-                        <div class="col-2"><h1 class="estoque__table__head__title">estoque</h1></div>
-                        <div class="col-2"><h1 class="estoque__table__head__title">editar</h1></div>
+                    <div role="row" class="estoque__table__head row">
+                        <div role="columnheader" class="col-4"><h1 class="estoque__table__head__title left">nome</h1></div>
+                        <div role="columnheader" class="col-2"><h1 class="estoque__table__head__title">imagem</h1></div>
+                        <div role="columnheader" class="col-2"><h1 class="estoque__table__head__title">preço</h1></div>
+                        <div role="columnheader" class="col-2"><h1 class="estoque__table__head__title">estoque</h1></div>
+                        <div role="columnheader" class="col-2"><h1 class="estoque__table__head__title">editar</h1></div>
                     </div>
 
                     {{#each recompensas}}
-                        <div class="estoque__table__data row">
-                            <div class="col-4"><h1 class="estoque__table__data__text">{{this.nome}}</h1></div>
-                            <div class="col-2"><a target="_blank" rel="noreferrer" class="estoque__table__data__link" href="/images/recompensas/{{this.nome_arquivo}}"><i class="estoque__table__data__icon flaticon-gallery"></i></a></div>
-                            <div class="col-2"><div class="estoque__table__data__row"><h1 class="estoque__table__data__text">{{this.preço}}</h1><img class="estoque__table__data__coin" src="/images/fs.png" alt=""></div></div>
-                            <div class="col-2"><h1 class="estoque__table__data__number">{{this.estoque}}</h1></div>
-                            <div class="col-2"><i id="{{this.id}}" class="estoque__table__data__icon edit flaticon-editar"></i></div>
+                        <div role="row" class="estoque__table__data row">
+                            <div role="cell" class="col-4"><h1 class="estoque__table__data__text">{{this.nome}}</h1></div>
+                            <div role="cell" class="col-2"><a target="_blank" rel="noreferrer" class="estoque__table__data__link" href="/images/recompensas/{{this.nome_arquivo}}"><i class="estoque__table__data__icon flaticon-gallery"></i></a></div>
+                            <div role="cell" class="col-2"><div class="estoque__table__data__row"><h1 class="estoque__table__data__text">{{this.preço}}</h1><img class="estoque__table__data__coin" src="/images/fs.png" alt=""></div></div>
+                            <div role="cell" class="col-2"><h1 class="estoque__table__data__number">{{this.estoque}}</h1></div>
+                            <div role="cell" class="col-2"><i id="{{this.id}}" class="estoque__table__data__icon edit flaticon-editar"></i></div>
                         </div>
                     {{/each}}
 
