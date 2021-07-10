@@ -30,7 +30,7 @@
 
                 </div>
 
-                <div class="funcionarios">
+                <div class="funcionarios" aria-live="polite">
 
                     <h1 class="funcionarios__title">lista de funcionários</h1>
 
@@ -48,15 +48,15 @@
                         <div class="funcionarios__table__data row">
                             <div class="col-4 col-md-3"><h1 class="funcionarios__table__data__text">{{this.nome}}</h1></div>
                             <div class="col-md-3 email"><h1 class="funcionarios__table__data__text">{{this.email}}</h1></div>
-                            <div class="col-3 col-md-2"><div class="funcionarios__table__data__row"><h1 class="funcionarios__table__data__text">{{this.flowin}}</h1><img class="funcionarios__table__data__coin" src="/images/fs.png" alt=""></div></div>
-                            <div class="col-3 col-md-2"><div class="funcionarios__table__data__row"><h1 class="funcionarios__table__data__text">{{this.outflow}}</h1><img class="funcionarios__table__data__coin" src="/images/fs.png" alt=""></div></div>
+                            <div class="col-3 col-md-2"><div class="funcionarios__table__data__row"><h1 class="funcionarios__table__data__text">{{this.flowin}}</h1><img class="funcionarios__table__data__coin" src="/images/fs.png" alt="moeda coinflow"></div></div>
+                            <div class="col-3 col-md-2"><div class="funcionarios__table__data__row"><h1 class="funcionarios__table__data__text">{{this.outflow}}</h1><img class="funcionarios__table__data__coin" src="/images/fs.png" alt="moeda coinflow"></div></div>
                             <div class="col-2 col-md-2"><i id="{{this.id}}" class="funcionarios__table__data__icon flaticon-delete"></i></div>
                         </div>
                     {{/each}}
 
                 </div>
 
-                <div class="delete">
+                <div class="delete" aria-live="polite">
                     <form id="form" method="POST">
                         <input class="delete__input" type="text" id="del" name="del">
                         <p class="delete__question">deletar usuário?</p>

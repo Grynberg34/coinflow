@@ -30,19 +30,19 @@
                         <h3 class="menu__msg">{{passdontmatch}}{{userexists}}{{whitespace}}{{invalidcode}}</h3>
 
                         <label class="menu__label" for="name"><b>nome completo</b></label>
-                        <input class="menu__input" type="text" name="name" id="name" required>
+                        <input class="menu__input" type="text" name="name" id="name" aria-required="true" required>
 
                         <label class="menu__label" for="email"><b>email</b></label>
-                        <input class="menu__input" type="email" name="email" id="email" required>
+                        <input class="menu__input" type="email" name="email" id="email" aria-required="true" required>
 
                         <label class="menu__label" for="code"><b>código da empresa</b></label>
-                        <input class="menu__input" type="text" placeholder="Insira o código fornecido pela empresa" name="code" id="code" required>
+                        <input class="menu__input" type="text" placeholder="Insira o código fornecido pela empresa" name="code" id="code" aria-required="true" required>
 
                         <label class="menu__label" for="password"><b>senha</b></label>
-                        <input class="menu__input" type="password" placeholder="Insira a senha" name="password" id="password" minlength="8" required>
+                        <input class="menu__input" type="password" placeholder="Insira a senha" name="password" id="password" minlength="8" aria-required="true" required>
 
                         <label class="menu__label" for="repeatpassword"><b>repetir</b></label>
-                        <input class="menu__input" type="password" placeholder="Repetir a senha" name="repeatpassword" id="repeatpassword" required>
+                        <input class="menu__input" type="password" placeholder="Repetir a senha" name="repeatpassword" id="repeatpassword" aria-required="true" required>
 
 
                         <button class="menu__button" type="submit">cadastrar</button>

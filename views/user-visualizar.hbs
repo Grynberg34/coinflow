@@ -30,7 +30,7 @@
 
                 </div>
 
-                <div class="recompensas" id="rec-list">
+                <div class="recompensas" id="rec-list" aria-live="polite">
 
                     <h1 class="recompensas__saldo">{{saldoinsuficiente}}</h1>
 
@@ -58,15 +58,15 @@
                             <div class="recompensas__recompensa row">
 
                                 <div class="col-md-4">
-                                    <img class="recompensas__recompensa__image" src="/images/recompensas//{{this.nome_arquivo}}" alt="">
+                                    <img class="recompensas__recompensa__image" src="/images/recompensas//{{this.nome_arquivo}}" alt="{{this.nome_arquivo}}">
                                 </div>
 
                                 <div class="col-1"></div>
 
                                 <div class="col-md-4">
                                     <h1 class="recompensas__recompensa__title title">{{this.nome}}</h1>
-                                    <p class="recompensas__recompensa__category category">{{this.categoria}}</p>
-                                    <h2 class="recompensas__recompensa__price">Preço: <span id="p{{this.id}}" class="price">{{this.preço}}</span> <img class="recompensas__coin" src="/images/fs.png" alt=""></h2>
+                                    <h2 class="recompensas__recompensa__category category">{{this.categoria}}</h2>
+                                    <h2 class="recompensas__recompensa__price">Preço: <span id="p{{this.id}}" class="price">{{this.preço}}</span> <img class="recompensas__coin" src="/images/fs.png" alt="moeda coinflow"></h2>
                                 </div>
 
                                 <div class="col-md-3">
@@ -80,7 +80,7 @@
 
                 </div>
 
-                <div class="form">
+                <div class="form" aria-live="polite">
                     <form id="form" method="POST">
                         <label class="form__label" for="rec_id">resgatar essa <br> recompensa?</label>
                         <input class="form__input" type="number" id="rec_id" name="rec_id">
