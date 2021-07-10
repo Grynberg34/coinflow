@@ -33,6 +33,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next) => { 
+  if ((req.headers["x-forwarded-proto"] || "").endsWith("http"))
+  res.redirect(`https://${req.hostname}${req.url}`);
+  else
+  next();
+});
+
+
 var sessionStore = new MySQLStore({}, connection);
 
 //Passport configs
