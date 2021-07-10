@@ -22,10 +22,10 @@
                 <div class="menu" role="menu">
 
                     <div class="row">
-                        <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
+                        <div class="col-md-4"><a role="menuitem" href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
                         <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
-                        <div class="col-md-2"><a href="/admin/{{user_id}}/enviar" class="menu__link">voltar</a></div>
-                        <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
+                        <div class="col-md-2"><a role="menuitem" href="/admin/{{user_id}}/enviar" class="menu__link">voltar</a></div>
+                        <div class="col-md-2"><a role="menuitem" href="/logout" class="menu__link">sair</a></div>
                     </div>
 
                 </div>
@@ -33,7 +33,7 @@
                 <div class="individual">
                     <h2 class="individual__msg">{{saldo}}{{notfound}}{{insuficiente}}</h2>
                     <h1 class="individual__title">seu outflow: {{this.outflow}}{{new_outflow}}<img class="individual__coin" src="/images/fs.png" alt="moeda coinflow"></h1>
-                    <form id="form" method="POST">
+                    <form role="form" id="form" method="POST">
                         <label class="individual__label" for="user">selecionar usário</label>
                         <select class="individual__input" name="user" id="user">
                             
@@ -48,7 +48,7 @@
                         <input class="individual__input" type="number" id="value" name="value">
                         <label class="individual__label" for="value">motivo do envio</label>
                         <textarea id="motivo" class="individual__text" name="motivo" rows="10" maxlength="1000"></textarea>
-                        <button id="formSubmit" class="individual__button" type="button">enviar</button>
+                        <button role="button" id="formSubmit" class="individual__button" type="button">enviar</button>
                     </form>
                 </div>
 

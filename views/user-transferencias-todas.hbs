@@ -22,10 +22,10 @@
                 <div class="menu" role="menu">
 
                     <div class="row">
-                        <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
+                        <div class="col-md-4"><a role="menuitem" href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
                         <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
-                        <div class="col-md-2"><a href="/user/{{user_id}}/transferencias" class="menu__link">voltar</a></div>
-                        <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
+                        <div class="col-md-2"><a role="menuitem" href="/user/{{user_id}}/transferencias" class="menu__link">voltar</a></div>
+                        <div class="col-md-2"><a role="menuitem" href="/logout" class="menu__link">sair</a></div>
                     </div>
 
                 </div>
@@ -34,16 +34,16 @@
                 <div class="transferencias" id="transf-list">
 
                     <div class="dropdown transferencias__dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button role="button" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             filtrar por:
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <button class="sort dropdown-item" data-sort="remetente" data-order="asc">remetente (A-Z)</button>
-                            <button class="sort dropdown-item" data-sort="remetente" data-order="desc">remetente (Z-A)</button>
-                            <button class="sort dropdown-item" data-sort="destinatario" data-order="asc">destinatário (A-Z)</button>
-                            <button class="sort dropdown-item" data-sort="destinatario" data-order="desc">destinatário (Z-A)</button>
-                            <button class="sort dropdown-item" data-sort="data" data-order="asc">data (antigo - novo)</button>
-                            <button class="sort dropdown-item" data-sort="data" data-order="desc">data (novo - antigo)</button>
+                            <button role="button" class="sort dropdown-item" data-sort="remetente" data-order="asc">remetente (A-Z)</button>
+                            <button role="button" class="sort dropdown-item" data-sort="remetente" data-order="desc">remetente (Z-A)</button>
+                            <button role="button" class="sort dropdown-item" data-sort="destinatario" data-order="asc">destinatário (A-Z)</button>
+                            <button role="button" class="sort dropdown-item" data-sort="destinatario" data-order="desc">destinatário (Z-A)</button>
+                            <button role="button" class="sort dropdown-item" data-sort="data" data-order="asc">data (antigo - novo)</button>
+                            <button role="button" class="sort dropdown-item" data-sort="data" data-order="desc">data (novo - antigo)</button>
                         </div>
                     </div>
 
