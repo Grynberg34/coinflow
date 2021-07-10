@@ -110,3 +110,12 @@ SPRINT 6 - JUNHO DE 2021
 2. Implementação de interface de transferências enviadas e recebidas pelo funcionário
 3. Implementação de interface para funcionários de empresa com todas as transferências realizadas por funcionários de uma empresa
 4. Implementação de interface para admins de empresa com todas as transferências realizadas por funcionários de uma empresa
+
+SPRINT 7 - JULHO DE 2021
+
+1. Implementação de testes unitários de cadastro de empresa
+2. Implementação de testes unitários de login de empresa
+3. Implementação de testes unitários de cadastro de funcionário
+4. Implementação de testes unitários de login de funcionário
+5. Planejamento de futuros testes a serem implementados
+6. Melhorias no HTML para tornar a aplicação mais acessível
