@@ -14,83 +14,86 @@
 </head>
 <body>
 
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+    <main>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
 
-            <div class="menu">
+                <div class="menu">
 
-                <div class="row">
-                    <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a></div>
-                    <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
-                    <div class="col-md-2"><a href="/user/{{user_id}}/recompensas" class="menu__link">voltar</a></div>
-                    <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
+                    <div class="row">
+                        <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
+                        <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
+                        <div class="col-md-2"><a href="/user/{{user_id}}/recompensas" class="menu__link">voltar</a></div>
+                        <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="recompensas" id="rec-list">
 
-            <div class="recompensas" id="rec-list">
+                    <h1 class="recompensas__saldo">{{saldoinsuficiente}}</h1>
 
-                <h1 class="recompensas__saldo">{{saldoinsuficiente}}</h1>
-
-                <div class="row recompensas__header">
-                    <div class="col-6"><h2 class="recompensas__flowin">flowin: <span id="flowin">{{flowin}}</span> <img class="recompensas__coin" src="/images/fs.png" alt=""></h2></div>
-                    <div class="col-6">
-                        <div class="dropdown recompensas__dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                filtrar por:
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <button class="sort dropdown-item" data-sort="title" data-order="asc">nome (A-Z)</button>
-                                <button class="sort dropdown-item" data-sort="title" data-order="desc">nome (Z-A)</button>
-                                <button class="sort dropdown-item" data-sort="category" data-order="asc">categoria (A-Z)</button>
-                                <button class="sort dropdown-item" data-sort="category" data-order="desc">categoria (Z-A)</button>
-                                <button class="sort dropdown-item" data-sort="price" data-order="asc">preço (menor-maior)</button>
-                                <button class="sort dropdown-item" data-sort="price" data-order="desc">preço (maior-menor)</button>
+                    <div class="row recompensas__header">
+                        <div class="col-6"><h2 class="recompensas__flowin">flowin: <span id="flowin">{{flowin}}</span> <img class="recompensas__coin" src="/images/fs.png" alt=""></h2></div>
+                        <div class="col-6">
+                            <div class="dropdown recompensas__dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    filtrar por:
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <button class="sort dropdown-item" data-sort="title" data-order="asc">nome (A-Z)</button>
+                                    <button class="sort dropdown-item" data-sort="title" data-order="desc">nome (Z-A)</button>
+                                    <button class="sort dropdown-item" data-sort="category" data-order="asc">categoria (A-Z)</button>
+                                    <button class="sort dropdown-item" data-sort="category" data-order="desc">categoria (Z-A)</button>
+                                    <button class="sort dropdown-item" data-sort="price" data-order="asc">preço (menor-maior)</button>
+                                    <button class="sort dropdown-item" data-sort="price" data-order="desc">preço (maior-menor)</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="list">
+                        {{#each recompensas}}
+
+                            <div class="recompensas__recompensa row">
+
+                                <div class="col-md-4">
+                                    <img class="recompensas__recompensa__image" src="/images/recompensas//{{this.nome_arquivo}}" alt="">
+                                </div>
+
+                                <div class="col-1"></div>
+
+                                <div class="col-md-4">
+                                    <h1 class="recompensas__recompensa__title title">{{this.nome}}</h1>
+                                    <p class="recompensas__recompensa__category category">{{this.categoria}}</p>
+                                    <h2 class="recompensas__recompensa__price">Preço: <span id="p{{this.id}}" class="price">{{this.preço}}</span> <img class="recompensas__coin" src="/images/fs.png" alt=""></h2>
+                                </div>
+
+                                <div class="col-md-3">
+                                        <button id="{{this.id}}" class="recompensas__recompensa__button">resgatar</button>
+                                </div>
+
+                            </div>
+
+                        {{/each}}
+                    </div>
+
                 </div>
-                <div class="list">
-                    {{#each recompensas}}
 
-                        <div class="recompensas__recompensa row">
-
-                            <div class="col-md-4">
-                                <img class="recompensas__recompensa__image" src="/images/recompensas//{{this.nome_arquivo}}" alt="">
-                            </div>
-
-                            <div class="col-1"></div>
-
-                            <div class="col-md-4">
-                                <h1 class="recompensas__recompensa__title title">{{this.nome}}</h1>
-                                <p class="recompensas__recompensa__category category">{{this.categoria}}</p>
-                                <h2 class="recompensas__recompensa__price">Preço: <span id="p{{this.id}}" class="price">{{this.preço}}</span> <img class="recompensas__coin" src="/images/fs.png" alt=""></h2>
-                            </div>
-
-                            <div class="col-md-3">
-                                    <button id="{{this.id}}" class="recompensas__recompensa__button">resgatar</button>
-                            </div>
-
-                        </div>
-
-                    {{/each}}
+                <div class="form">
+                    <form id="form" method="POST">
+                        <label class="form__label" for="rec_id">resgatar essa <br> recompensa?</label>
+                        <input class="form__input" type="number" id="rec_id" name="rec_id">
+                        <button id="formSubmit" class="form__button" type="button">confirmar</button>
+                    </form>
+                    <h1 class="form__message">saldo insuficiente</h1>
+                    <button id="formReturn" class="form__button">voltar</button>
                 </div>
 
             </div>
-
-            <div class="form">
-                <form id="form" method="POST">
-                    <label class="form__label" for="rec_id">resgatar essa <br> recompensa?</label>
-                    <input class="form__input" type="number" id="rec_id" name="rec_id">
-                    <button id="formSubmit" class="form__button" type="button">confirmar</button>
-                </form>
-                <h1 class="form__message">saldo insuficiente</h1>
-                <button id="formReturn" class="form__button">voltar</button>
-            </div>
-
         </div>
-    </div>
+        
+    </main>
 
 
 

@@ -13,35 +13,37 @@
 </head>
 <body>
 
-    <div class="row content">
-        <div class="col-md-4"></div>
+    <main>
+        <div class="row content">
+            <div class="col-md-4"></div>
 
-        <div class="col-md-4">
+            <div class="col-md-4">
 
-            <div class="menu">
+                <div class="menu">
 
-                <form action="/redefinir/codigo/funcionario" method="POST">
+                    <form action="/redefinir/codigo/funcionario" method="POST">
 
-                    <a href="/"><img class="menu__logo" src="/images/logo.png" alt=""></a>
-                    <h1 class="menu__title">REDEFINIR</h1>
-                    <p class="menu__msg">{{message}} {{message2}}</p>
-                    <label class="menu__label" for="code"><b>CÓDIGO</b></label>
-                    <input class="menu__input" type="text" placeholder="Enter received code" name="code" id="code" required>
-                    <label class="menu__label" for="password"><b>NOVA SENHA</b></label>
-                    <input class="menu__input" type="password" placeholder="Enter new password" name="password" id="password" minlength="8" required>
-                    <label class="menu__label" for="repeatpassword"><b>REPETIR</b></label>
-                    <input class="menu__input" type="password" placeholder="Repeat password" name="repeatpassword" id="repeatpassword" required>
+                        <a href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a>
+                        <h1 class="menu__title">REDEFINIR</h1>
+                        <p class="menu__msg">{{message}} {{message2}}</p>
+                        <label class="menu__label" for="code"><b>CÓDIGO</b></label>
+                        <input class="menu__input" type="text" placeholder="Enter received code" name="code" id="code" required>
+                        <label class="menu__label" for="password"><b>NOVA SENHA</b></label>
+                        <input class="menu__input" type="password" placeholder="Enter new password" name="password" id="password" minlength="8" required>
+                        <label class="menu__label" for="repeatpassword"><b>REPETIR</b></label>
+                        <input class="menu__input" type="password" placeholder="Repeat password" name="repeatpassword" id="repeatpassword" required>
 
-                    <button class="menu__button" type="submit">REDEFINIR</button>
+                        <button class="menu__button" type="submit">REDEFINIR</button>
 
-                </form>
+                    </form>
 
+
+                </div>
 
             </div>
-
+            <div class="col-md-4"></div>
         </div>
-        <div class="col-md-4"></div>
-    </div>
+    </main>
 
 
     <!--Bootstrap-->
