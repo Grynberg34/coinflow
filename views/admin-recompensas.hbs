@@ -19,24 +19,24 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
 
-                <div class="menu">
+                <div class="menu" role="menu">
 
                     <div class="row">
-                        <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
+                        <div class="col-md-4"><a role="menuitem" href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
                         <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
-                        <div class="col-md-2"><a href="/" class="menu__link">menu</a></div>
-                        <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
+                        <div class="col-md-2"><a role="menuitem" href="/" class="menu__link">menu</a></div>
+                        <div class="col-md-2"><a role="menuitem" href="/logout" class="menu__link">sair</a></div>
                     </div>
 
                     <div class="row menu__options">
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas/estoque">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas/estoque">
                             <div class="menu__options__option" id="editar">
                                 <i class="flaticon-shipping menu__options__option__icon"></i>
                                 <h4 class="menu__options__option__title">editar estoque</h4>
                             </div>
                         </a>
                         <div class="col-2"></div>
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas/resgates">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas/resgates">
                             <div class="menu__options__option" id="mensal">
                                 <i class="flaticon-get-gifts menu__options__option__icon"></i>
                                 <h4 class="menu__options__option__title">resgates</h4>
@@ -45,14 +45,14 @@
                     </div>
 
                     <div class="row menu__options">
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas/adicionar">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas/adicionar">
                             <div class="menu__options__option" id="individual">
                                 <i class="flaticon-add-button menu__options__option__icon"></i>
                                 <h4 class="menu__options__option__title">adicionar</h4>
                             </div>
                         </a>
                         <div class="col-2"></div>
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas/remover">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas/remover">
                             <div class="menu__options__option" id="historico">
                                 <i class="flaticon-remove menu__options__option__icon"></i>
                                 <h4 class="menu__options__option__title">remover</h4>
@@ -60,8 +60,8 @@
                         </a>
                     </div>
 
-                    <a href="/" class="menu__link mobile__link">menu</a>
-                    <a href="/logout" class="menu__link mobile__link sair">sair</a>
+                    <a role="menuitem" href="/" class="menu__link mobile__link">menu</a>
+                    <a role="menuitem" href="/logout" class="menu__link mobile__link sair">sair</a>
 
                 </div>
 

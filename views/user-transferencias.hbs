@@ -19,18 +19,18 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
 
-                <div class="menu">
+                <div class="menu" role="menu">
 
                     <div class="row">
-                        <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
+                        <div class="col-md-4"><a role="menuitem" href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
                         <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
-                        <div class="col-md-2"><a href="/admin/{{user_id}}/enviar" class="menu__link">voltar</a></div>
-                        <div class="col-md-2"><a href="/logout" class="menu__link">sair</a></div>
+                        <div class="col-md-2"><a role="menuitem" href="/admin/{{user_id}}/enviar" class="menu__link">voltar</a></div>
+                        <div class="col-md-2"><a role="menuitem" href="/logout" class="menu__link">sair</a></div>
                     </div>
 
                     <div class="row menu__options">
 
-                        <a class="col-5 menu__options__link" href="/user/{{user_id}}/transferencias/minhas">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/user/{{user_id}}/transferencias/minhas">
                             <div class="menu__options__option" id="liberar">
                                 <i class="flaticon-data-transfer menu__options__option__icon"></i>
                                 <h1 class="menu__options__option__title">minhas transferências</h1>
@@ -38,7 +38,7 @@
                         </a>
 
                         <div class="col-2"></div>
-                        <a class="col-5 menu__options__link" href="/user/{{user_id}}/transferencias/todas">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/user/{{user_id}}/transferencias/todas">
                             <div class="menu__options__option" id="liberar">
                                 <i class="flaticon-transfer menu__options__option__icon"></i>
                                 <h1 class="menu__options__option__title">todas as transferências</h1>
@@ -46,8 +46,8 @@
                         </a>
                     </div>
 
-                    <a href="/" class="menu__link mobile__link">menu</a>
-                    <a href="/logout" class="menu__link mobile__link sair">sair</a>
+                    <a role="menuitem" href="/" class="menu__link mobile__link">menu</a>
+                    <a role="menuitem" href="/logout" class="menu__link mobile__link sair">sair</a>
 
                 </div>
 

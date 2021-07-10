@@ -19,10 +19,10 @@
 
             <div class="col-md-4">
 
-                <div class="menu">
+                <div class="menu" role="menu">
                     <form action="/login/funcionario" method="post">
 
-                        <a href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a>
+                        <a role="menuitem" href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a>
 
                         <h1 class="menu__title">login</h1>
                         <h3 class="menu__type">funcionário</h3>
@@ -36,7 +36,7 @@
                         <label class="menu__label" for="password">senha</label>
                         <input class="menu__input" type="password" placeholder="Insira a senha" name="password" id="password" minlength="8" aria-required="true" required>
 
-                        <a class="menu__link" href="/redefinir/funcionario">esqueceu a senha?</a>
+                        <a role="menuitem" class="menu__link" href="/redefinir/funcionario">esqueceu a senha?</a>
 
                         <button class="menu__button" type="submit">entrar</button>
 

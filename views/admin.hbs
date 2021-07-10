@@ -19,23 +19,23 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
 
-                <div class="menu">
+                <div class="menu" role="menu">
 
                     <div class="row">
-                        <div class="col-md-4"><a href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
+                        <div class="col-md-4"><a role="menuitem" href="/"><img class="menu__logo" src="/images/logo.png" alt="Logo da coinflow"></a></div>
                         <div class="col-md-4"><h1 class="menu__title">{{nome}}</h1></div>
-                        <div class="col-md-4"><a href="/logout" class="menu__link">sair</a></div>
+                        <div class="col-md-4"><a role="menuitem" href="/logout" class="menu__link">sair</a></div>
                     </div>
 
                     <div class="row menu__options">
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/funcionarios">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/admin/{{user_id}}/funcionarios">
                             <div class="menu__options__option" id="funcionarios">
                                 <i class="flaticon-customer menu__options__option__icon"></i>
                                 <h4 class="menu__options__option__title">funcionários</h4>
                             </div>
                         </a>
                         <div class="col-2"></div>
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/enviar">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/admin/{{user_id}}/enviar">
                             <div class="menu__options__option" id="liberar">
                                 <i class="flaticon-salary menu__options__option__icon"></i>
                                 <h4 class="menu__options__option__title">enviar saldo</h4>
@@ -44,14 +44,14 @@
                     </div>
 
                     <div class="row menu__options">
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/transferencias">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/admin/{{user_id}}/transferencias">
                             <div class="menu__options__option" id="transferencias">
                                 <i class="flaticon-transfer menu__options__option__icon"></i>
                                 <h4 class="menu__options__option__title">transferências</h4>
                             </div>
                         </a>
                         <div class="col-2"></div>
-                        <a class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas">
+                        <a role="menuitem" class="col-5 menu__options__link" href="/admin/{{user_id}}/recompensas">
                             <div class="menu__options__option" id="recompensas">
                                 <i class="flaticon-gift-box-with-a-bow menu__options__option__icon"></i>
                                 <h4 class="menu__options__option__title">recompensas</h4>
